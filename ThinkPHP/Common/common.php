@@ -17,6 +17,85 @@
  */
 
 /**
+ * 获取输入参数 支持过滤和默认值
+ * 使用方法:
+ * <code>
+ * I('id',0); 获取id参数 自动判断get或者post
+ * I('post.name','','htmlspecialchars'); 获取$_POST['name']
+ * I('get.'); 获取$_GET
+ * </code> 
+ * @param string $name 变量的名称 支持指定类型
+ * @param mixed $default 不存在的时候默认值
+ * @param mixed $filter 参数过滤方法
+ * @return mixed
+ */
+function I($name,$default='',$filter=null) {
+    if(strpos($name,'.')) { // 指定参数来源
+        list($method,$name) =   explode('.',$name);
+    }else{ // 默认为自动判断
+        $method =   'param';
+    }
+    switch(strtolower($method)) {
+        case 'get'     :   $input =& $_GET;break;
+        case 'post'    :   $input =& $_POST;break;
+        case 'put'     :   parse_str(file_get_contents('php://input'), $input);break;
+        case 'param'   :  
+        switch($_SERVER['REQUEST_METHOD']) {
+            case 'POST':
+            $input  =  $_POST;
+            break;
+            case 'PUT':
+            parse_str(file_get_contents('php://input'), $input);
+            break;
+            default:
+            $input  =  $_GET;
+        }
+        if(C('VAR_URL_PARAMS') && isset($_GET[C('VAR_URL_PARAMS')])){
+            $input  =   array_merge($input,$_GET[C('VAR_URL_PARAMS')]);
+        }
+        break;
+        case 'request' :   $input =& $_REQUEST;   break;
+        case 'session' :   $input =& $_SESSION;   break;
+        case 'cookie'  :   $input =& $_COOKIE;    break;
+        case 'server'  :   $input =& $_SERVER;    break;
+        case 'globals' :   $input =& $GLOBALS;    break;
+        default:
+        return NULL;
+    }
+    // 全局过滤
+    // array_walk_recursive($input,'filter_exp');
+    if(C('VAR_FILTERS')) {
+        $_filters    =   explode(',',C('VAR_FILTERS'));
+        foreach($_filters as $_filter){
+            // 全局参数过滤
+            array_walk_recursive($input,$_filter);
+        }
+    }
+    if(empty($name)) { // 获取全部变量
+        $data       =   $input; 
+    }elseif(isset($input[$name])) { // 取值操作
+        $data       =	$input[$name];
+        $filters    =   isset($filter)?$filter:C('DEFAULT_FILTER');
+        if($filters) {
+            $filters    =   explode(',',$filters);
+            foreach($filters as $filter){
+                if(function_exists($filter)) {
+                    $data   =   is_array($data)?array_map($filter,$data):$filter($data); // 参数过滤
+                }else{
+                    $data   =   filter_var($data,is_int($filter)?$filter:filter_id($filter));
+                    if(false === $data) {
+                        return	 isset($default)?$default:NULL;
+                    }
+                }
+            }
+        }
+    }else{ // 变量默认值
+        $data       =	 isset($default)?$default:NULL;
+    }
+    return $data;
+}
+
+/**
  * 记录和统计时间（微秒）和内存使用情况
  * 使用方法:
  * <code>
@@ -46,7 +125,7 @@ function G($start,$end='',$dec=4) {
         }else{
             return number_format(($_info[$end]-$_info[$start]),$dec);
         }       
-            
+
     }else{ // 记录时间和内存使用
         $_info[$start]  =  microtime(TRUE);
         if(MEMORY_LIMIT_ON) $_mem[$start]           =  memory_get_usage();
@@ -264,10 +343,16 @@ function D($name='',$layer='') {
         $name       =   C('DEFAULT_APP').'/'.$layer.'/'.$name;
     }
     if(isset($_model[$name]))   return $_model[$name];
-    import($name.$layer);
+    $path           =   explode('/',$name);
+    if(count($path)>3 && 1 == C('APP_GROUP_MODE')) { // 独立分组
+        $baseUrl    =   $path[0]== '@' ? dirname(BASE_LIB_PATH) : APP_PATH.'../'.$path[0].'/'.C('APP_GROUP_PATH').'/';
+        import($path[2].'/'.$path[1].'/'.$path[3].$layer,$baseUrl);
+    }else{
+        import($name.$layer);
+    } 
     $class          =   basename($name.$layer);
     if(class_exists($class)) {
-        $model      =   new $class();
+        $model      =   new $class(basename($name));
     }else {
         $model      =   new Model(basename($name));
     }
@@ -311,15 +396,19 @@ function A($name,$layer='',$common=false) {
         $name   =  '@/'.$layer.'/'.$name;
     }
     if(isset($_action[$name]))  return $_action[$name];
-    if($common){ // 独立分组情况下 加载公共目录类库
+    $path           =   explode('/',$name);
+    if(count($path)>3 && 1 == C('APP_GROUP_MODE')) { // 独立分组
+        $baseUrl    =   $path[0]== '@' ? dirname(BASE_LIB_PATH) : APP_PATH.'../'.$path[0].'/'.C('APP_GROUP_PATH').'/';
+        import($path[2].'/'.$path[1].'/'.$path[3].$layer,$baseUrl);
+    }elseif($common) { // 加载公共类库目录
         import(str_replace('@/','',$name).$layer,LIB_PATH);
     }else{
-        import($name.$layer); 
-    }    
+        import($name.$layer);
+    }
     $class      =   basename($name.$layer);
     if(class_exists($class,false)) {
-        $action             = new $class();
-        $_action[$name]     =  $action;
+        $action             =   new $class();
+        $_action[$name]     =   $action;
         return $action;
     }else {
         return false;
@@ -354,7 +443,7 @@ function R($url,$vars=array(),$layer='') {
  * @param string $value 语言值
  * @return mixed
  */
-function L($name=null, $value=null) {
+function L($name=null, $value=null, $pars=array()) {
     static $_lang = array();
     // 空参数返回所有定义
     if (empty($name))
@@ -364,7 +453,15 @@ function L($name=null, $value=null) {
     if (is_string($name)) {
         $name = strtoupper($name);
         if (is_null($value))
-            return isset($_lang[$name]) ? $_lang[$name] : $name;
+        {
+            $language = isset($_lang[$name]) ? $_lang[$name] : $name;
+            if($pars) {
+                foreach($pars AS $_k=>$_v) {
+                    $language = str_replace('{'.$_k.'}',$_v,$language);
+                }
+            }
+            return $language;
+        }
         $_lang[$name] = $value; // 语言定义
         return;
     }
@@ -432,18 +529,18 @@ function tag($tag, &$params=NULL) {
         if(empty($tags['_overlay']) && !empty($extends)) { // 合并扩展
             $tags = array_unique(array_merge($extends,$tags));
         }elseif(isset($tags['_overlay'])){ // 通过设置 '_overlay'=>1 覆盖系统标签
-            unset($tags['_overlay']);
-        }
-    }elseif(!empty($extends)) {
-        $tags = $extends;
+        unset($tags['_overlay']);
     }
-    if($tags) {
-        if(APP_DEBUG) {
-            G($tag.'Start');
-            trace('[ '.$tag.' ] --START--','','INFO');
-        }
+}elseif(!empty($extends)) {
+    $tags = $extends;
+}
+if($tags) {
+    if(APP_DEBUG) {
+        G($tag.'Start');
+        trace('[ '.$tag.' ] --START--','','INFO');
+    }
         // 执行扩展
-        foreach ($tags as $key=>$name) {
+    foreach ($tags as $key=>$name) {
             if(!is_int($key)) { // 指定行为类的完整路径 用于模式扩展
                 $name   = $key;
             }
@@ -515,31 +612,31 @@ function strip_whitespace($content) {
                 //过滤各种PHP注释
                 case T_COMMENT:
                 case T_DOC_COMMENT:
-                    break;
+                break;
                 //过滤空格
                 case T_WHITESPACE:
-                    if (!$last_space) {
-                        $stripStr  .= ' ';
-                        $last_space = true;
-                    }
-                    break;
+                if (!$last_space) {
+                    $stripStr  .= ' ';
+                    $last_space = true;
+                }
+                break;
                 case T_START_HEREDOC:
-                    $stripStr .= "<<<THINK\n";
-                    break;
+                $stripStr .= "<<<THINK\n";
+                break;
                 case T_END_HEREDOC:
-                    $stripStr .= "THINK;\n";
-                    for($k = $i+1; $k < $j; $k++) {
-                        if(is_string($tokens[$k]) && $tokens[$k] == ';') {
-                            $i = $k;
-                            break;
-                        } else if($tokens[$k][0] == T_CLOSE_TAG) {
-                            break;
-                        }
+                $stripStr .= "THINK;\n";
+                for($k = $i+1; $k < $j; $k++) {
+                    if(is_string($tokens[$k]) && $tokens[$k] == ';') {
+                        $i = $k;
+                        break;
+                    } else if($tokens[$k][0] == T_CLOSE_TAG) {
+                        break;
                     }
-                    break;
+                }
+                break;
                 default:
-                    $last_space = false;
-                    $stripStr  .= $tokens[$i][1];
+                $last_space = false;
+                $stripStr  .= $tokens[$i][1];
             }
         }
     }
@@ -597,8 +694,8 @@ function trace($value='[think]',$label='',$level='DEBUG',$record=false) {
         }
         $level  =   strtoupper($level);
         if(!isset($_trace[$level])) {
-                $_trace[$level] =   array();
-            }
+            $_trace[$level] =   array();
+        }
         $_trace[$level][]   = $info;
         if((defined('IS_AJAX') && IS_AJAX) || !C('SHOW_PAGE_TRACE')  || $record) {
             Log::record($info,$level,$record);

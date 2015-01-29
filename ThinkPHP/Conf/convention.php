@@ -61,7 +61,7 @@ return  array(
     'DB_NAME'               => '',          // 数据库名
     'DB_USER'               => 'root',      // 用户名
     'DB_PWD'                => '',          // 密码
-    'DB_PORT'               => '',        // 端口
+    'DB_PORT'               => '3306',        // 端口
     'DB_PREFIX'             => 'think_',    // 数据库表前缀
     'DB_FIELDTYPE_CHECK'    => false,       // 是否进行字段类型检查
     'DB_FIELDS_CACHE'       => true,        // 启用字段缓存
@@ -102,7 +102,7 @@ return  array(
 
     /* SESSION设置 */
     'SESSION_AUTO_START'    => true,    // 是否自动开启Session
-    'SESSION_OPTIONS'       => array(), // session 配置数组 支持type name id path expire domian 等参数
+    'SESSION_OPTIONS'       => array(), // session 配置数组 支持type name id path expire domain 等参数
     'SESSION_TYPE'          => '', // session hander类型 默认无需设置 除非扩展了session hander驱动
     'SESSION_PREFIX'        => '', // session 前缀
     //'VAR_SESSION_ID'      => 'session_id',     //sessionID的提交变量
@@ -122,7 +122,7 @@ return  array(
     // 0 (普通模式); 1 (PATHINFO 模式); 2 (REWRITE  模式); 3 (兼容模式)  默认为PATHINFO 模式，提供最好的用户体验和SEO支持
     'URL_PATHINFO_DEPR'     => '/',	// PATHINFO模式下，各参数之间的分割符号
     'URL_PATHINFO_FETCH'    =>   'ORIG_PATH_INFO,REDIRECT_PATH_INFO,REDIRECT_URL', // 用于兼容判断PATH_INFO 参数的SERVER替代变量列表
-    'URL_HTML_SUFFIX'       => '',  // URL伪静态后缀设置
+    'URL_HTML_SUFFIX'       => 'html',  // URL伪静态后缀设置
     'URL_PARAMS_BIND'       =>  true, // URL变量绑定到Action方法参数
     'URL_404_REDIRECT'      =>  '', // 404 跳转页面 部署模式有效
 
@@ -137,7 +137,7 @@ return  array(
     'VAR_TEMPLATE'          => 't',		// 默认模板切换变量
     'VAR_FILTERS'           =>  'filter_exp',     // 全局系统变量的默认过滤方法 多个用逗号分割
 
-    'OUTPUT_ENCODE'         =>  true, // 页面压缩输出
+    'OUTPUT_ENCODE'         =>  false, // 页面压缩输出
     'HTTP_CACHE_CONTROL'    =>  'private', // 网页缓存控制
 
 );
