@@ -10,7 +10,7 @@
 <table width="100%" border="0" cellspacing="0" cellpadding="0">
   <tr>
     <th>站点名称：</th>
-    <td>...</td>
+    <td><?php echo ($data['title']); ?></td>
   </tr>
   <tr>
     <th>文章数量：</th>

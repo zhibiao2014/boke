@@ -8,7 +8,7 @@
 </head>
 
 <body id="index">
-<h1></h1>
+<h1><?php var_dump($data); ?></h1>
 <ul id="globalNav">
 	<li><a href="#">管理项目1</a>
 		<ul>
