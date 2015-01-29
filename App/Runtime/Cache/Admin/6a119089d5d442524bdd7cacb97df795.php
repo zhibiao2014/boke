@@ -6,11 +6,12 @@
 <link href="CSS_PATH/style.css" rel="stylesheet" type="text/css" />
 </head>
 <body id="page">
+
 <h2>站点信息</h2>
 <table width="100%" border="0" cellspacing="0" cellpadding="0">
   <tr>
     <th>站点名称：</th>
-    <td><?php echo ($data['title']); ?></td>
+    <td>主站</td>
   </tr>
   <tr>
     <th>文章数量：</th>
