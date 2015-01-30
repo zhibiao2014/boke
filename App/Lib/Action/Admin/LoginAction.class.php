@@ -33,20 +33,19 @@ Class LoginAction extends Action
 		}
 
 		$data = array(
-			'id' => $user['id'],
+			'id' => $user['user_id'],
 			'logintime' => time(),
 			'loginip' => get_client_ip()
 			);
 		$db->save($data);
-		$_SESSION['uid']= $user['id'];
-		session('uid', $user['id']);
-		session('username', $user['username']);
+		
+
+		session('uid', $user['user_id']);
+		session('username', $user['name']);
 		session('logintime', date('Y-m-d H:i', $user['logintime']));
 		session('now', date('Y-m-d H:i', time()));
 		session('loginip', $user['loginip']);
 		session('admin', $user['admin']);
-		var_dump($_SESSION['uid']);
-		exit();
 		$this->success('正在登录...', __APP__.'/Admin/Index/index');
 
 	}

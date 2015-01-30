@@ -1,5 +1,5 @@
 <?php  
-Class IndexAction extends CommonAction {
+Class IndexAction extends Action {
 	public function index(){
 		$db=M('boke');
 		$this->bokes=$db->select();
