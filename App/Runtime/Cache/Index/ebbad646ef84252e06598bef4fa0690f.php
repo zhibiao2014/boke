@@ -70,7 +70,7 @@
 		</div>
 		<div class="h_search">
     		<form>
-    			<input type="text" value="" placeholder="search something...">
+    			<input type="text" value="" placeholder="搜索博客...">
     			<input type="submit" value="">
     		</form>
 		</div>
@@ -127,8 +127,8 @@
 				<div id="da-slider" class="da-slider">
 				<?php foreach ($bokes as $key => $value ) { ?>
 				<div class="da-slide">
-					<h2><?php echo ($value['title']); ?></h2>
-					<p><?php echo ($value['content']); ?>.</p>
+					<h2><a href="#" style="color:white"><?php echo ($value['title']); ?></a></h2>
+					<p>&nbsp&nbsp<?php echo ($value['content']); ?>.</p>
 				</div>
 				<?php } ?>
 				<nav class="da-arrows">
@@ -178,22 +178,8 @@
 			<?php foreach ($bokes as $key=>$value){ ?>
 			<div class="span1_of_3">
 				<a href="details"><img src="__PUBLIC__/images/pic1.jpg" alt=""/></a>
-				<div class="span1_of_3_text" height='150px'>
-					<h3><a href="details"><?php echo ($value['title']); ?></a></h3>
-					<p><?php echo ($value['content']); ?>.</p>
-				</div>
-			</div>
-			<?php } ?>
-			<div class="clear"></div>
-		</div>
-		<!--  -->
-		<div class="span_of_3">
-			<?php foreach ($bokes as $key => $value){ ?>
-			<div class="span1_of_3">
-				<a href="details"><img src="__PUBLIC__/images/pic4.jpg" alt=""/></a>
 				<div class="span1_of_3_text">
 					<h3><a href="details"><?php echo ($value['title']); ?></a></h3>
-					<p><?php echo ($value['content']); ?>.</p>
 				</div>
 			</div>
 			<?php } ?>
@@ -269,28 +255,34 @@ $(window).load(function() {
 		<div class="span_of_4">
 			<div class="span1_of_4">
 				<h4>热门文章</h4>
-				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+				<?php foreach ($hots as $key=>$value) { ?>
+				<h3><a href="details" style="color:white"><?php echo ($value['title']); ?></a></h3>
 				<ul class="f_nav1">
-					<li class="timer"><a href="#">25-september 2013 </a></li>
-				</ul>
-				<p class="top">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-				<ul class="f_nav1">
-					<li class="timer"><a href="#">25-september 2013 </a></li>
-				</ul>
+					<li class="timer"><a href="#"><?php echo ($value['create_at']); ?></a></li>
+				</ul><br>
+				<?php } ?>
 			</div>
 			<div class="span1_of_4">
 				<h4>特色文章</h4>
-				<p>It is a long established fact that a reader will be distracted by the<big>readable</big> content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal <big>blog</big> Many desktop publishing packages and web page editors now use Lorem.</p>
+				<?php foreach ($tags as $key=>$value) { ?>
+				<h3><a href="details" style="color:white"><?php echo ($value['title']); ?></a></h3>
+				<ul class="f_nav1">
+					<li class="timer"><a href="#"><?php echo ($value['create_at']); ?></a></li>
+				</ul><br>
+				<?php } ?>
 			</div>
 			<div class="span1_of_4">
 				<h4>关于我们</h4>
-				<p class="btm">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
-				<p>It is a long established fact that a reader will be of a page when looking at its layout.</p>
-
+				<ul style="color:white">
+				<li>人若有志，就不会在半坡停止。</li><br>
+				<li>相信自己，一定能成功。</li><br>
+				<li>学习是苦根上长出来的甜果。</li><br>
+				<li>相信自己的目标，努力，努力，在努力！</li>
+				</ul>
 			</div>
 			<div class="span1_of_4">
 				<h4>保持联系</h4>
-				<p class="btm">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since</p>
+				<p class="btm"></p>
 				<p class="btm1 pin">湖南常德</p>
 				<p class="btm1 mail"><a href="mailto:276595510@qq.com">给我发邮件</a></p>
 				<p class="call">18711665602</p>

@@ -3,6 +3,8 @@ Class IndexAction extends Action {
 	public function index(){
 		$db=M('boke');
 		$this->bokes=$db->select();
+		$this->tags=$db->where( array( 'type'=>2 ) )->select();
+		$this->hots=$db->where( array( 'type'=>1 ) )->select();
 		$this->display();
 	}
 	public function blog(){
