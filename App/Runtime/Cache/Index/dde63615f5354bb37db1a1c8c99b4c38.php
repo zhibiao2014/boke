@@ -1,4 +1,5 @@
-<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE HTML>
+<?php if (!defined('THINK_PATH')) exit();?>
+<!DOCTYPE HTML>
 <html>
 <head>
 <title>Home</title>
@@ -91,8 +92,8 @@
         </div>
         <div class="sub-head">
         	<ul>
-            	<li><a href="#" id="menu">菜单  <span></span></a></li>
-            	<li><a href="#" id="search">搜索 <span></span></a></li>
+            	<li><a href="#" id="menu">Menu  <span></span></a></li>
+            	<li><a href="#" id="search">Search <span></span></a></li>
             </ul>
             <div class="clear"></div>
         </div>
@@ -123,20 +124,30 @@
 <div class="slider_bg">
 <div class="wrap">
 	<div class="slider">
-				<!---start-da-slider-->
+				<!---start-da-slider----->
 				<div id="da-slider" class="da-slider">
-				<?php foreach ($bokes as $key => $value ) { ?>
 				<div class="da-slide">
-					<h2><?php echo ($value['title']); ?></h2>
-					<p><?php echo ($value['content']); ?>.</p>
+					<h2>Welcome to our website</h2>
+					<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
 				</div>
-				<?php } ?>
+				<div class="da-slide">
+					<h2>Clean & Flat Design</h2>
+					<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+				</div>
+				<div class="da-slide">
+					<h2>Clean & Flat Design</h2>
+					<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+				</div>
+				<div class="da-slide">
+					<h2>Welcome to our website</h2>
+					<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+				</div>			
 				<nav class="da-arrows">
 					<span class="da-arrows-prev"></span>
 					<span class="da-arrows-next"></span>
 				</nav>
 			</div>
- 			<!--//End-da-slider-->
+ 			<!---//End-da-slider----->
  	</div>
 </div>
 </div>
@@ -144,25 +155,25 @@
 <div class="wrap">
 	<div class="main">
 		<div class="main_text">
-			<h2>生命就是个奇迹！！！</h2>
-			<p class="para">"一枝从污泥里长出的夏荷，竟开出雪一样洁白纯净的花儿；<br />  一粒细细黑黑的萤火虫，竟能在茫茫黑夜里发出星星般闪亮的光。<br />  一株微不足道的小草，竟开出像海洋一样湛蓝的花；<br />  一只毫不起眼的鸟儿，竟能在枝头唱出远胜小提琴的夜曲；<br />  一条柔软无骨的蚯蚓，居然能在坚实的土地里如鱼在海中似的自由遨游。"</p>
+			<h2>Lorem Ipsum is <span>simply dummy </span> text of the printing.</h2>
+			<p class="para">"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
 		</div>
 		<!-- start grids_of_3 -->
 		<div class="grids_of_3">
 			<div class="grid1_of_3">
 				<img src="__PUBLIC__/images/icon1.png" alt=""/>
-				<h3><a href="#">视频 </a></h3>
-				<p>百度视频搜索是全球最大的中文视频搜索引擎,拥有最多的中文视频资源,提供用户最完美的观看体验。.</p>
+				<h3><a href="#">Lorem Ipsum is <span> simply </span> </a></h3>
+				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's.</p>
 			</div>
 			<div class="grid1_of_3">
 				<img src="__PUBLIC__/images/icon2.png" alt=""/>
-				<h3><a href="#">文章 </span> </a></h3>
-				<p>爱情、亲情、友情等情感文章欣赏及人生感悟、经典、哲理、励志、搞笑文章,校园文章、美文故事、散文随笔等免费在线阅读。欢迎作者在本站发表文章,分享心情。.</p>
+				<h3><a href="#">Lorem Ipsum is <span> simply </span> </a></h3>
+				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's.</p>
 			</div>
 			<div class="grid1_of_3">
 				<img src="__PUBLIC__/images/icon3.png" alt=""/>
-				<h3><a href="#">图片 </span> </a></h3>
-				<p>50万张高清图片素材和桌面壁纸免费下载,全部高清无水印!内容涵盖风景图片、动物图片、鲜花图片、家居图片、设计素材、电脑壁纸、动漫壁纸、电影壁纸、明星壁纸、美女...</p>
+				<h3><a href="#">Lorem Ipsum is <span> simply </span> </a></h3>
+				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's.</p>
 			</div>
 			<div class="clear"></div>
 		</div>
@@ -175,28 +186,52 @@
 	<div class="main content_top">
 		<!-- start span_of_3 -->
 		<div class="span_of_3">
-			<?php foreach ($bokes as $key=>$value){ ?>
 			<div class="span1_of_3">
 				<a href="details"><img src="__PUBLIC__/images/pic1.jpg" alt=""/></a>
-				<div class="span1_of_3_text" height='150px'>
-					<h3><a href="details"><?php echo ($value['title']); ?></a></h3>
-					<p><?php echo ($value['content']); ?>.</p>
+				<div class="span1_of_3_text">
+					<h3><a href="details">Lorem Ipsum is simply  text</a></h3>
+					<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's.</p>
 				</div>
 			</div>
-			<?php } ?>
+			<div class="span1_of_3">
+				<a href="details"><img src="__PUBLIC__/images/pic2.jpg" alt=""/></a>
+				<div class="span1_of_3_text">
+					<h3><a href="details">Lorem Ipsum is simply  text</a></h3>
+					<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's.</p>
+				</div>
+			</div>
+			<div class="span1_of_3">
+				<a href="details"><img src="__PUBLIC__/images/pic3.jpg" alt=""/></a>
+				<div class="span1_of_3_text">
+					<h3><a href="details">Lorem Ipsum is simply  text</a></h3>
+					<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's.</p>
+				</div>
+			</div>
 			<div class="clear"></div>
 		</div>
 		<!--  -->
 		<div class="span_of_3">
-			<?php foreach ($bokes as $key => $value){ ?>
 			<div class="span1_of_3">
 				<a href="details"><img src="__PUBLIC__/images/pic4.jpg" alt=""/></a>
 				<div class="span1_of_3_text">
-					<h3><a href="details"><?php echo ($value['title']); ?></a></h3>
-					<p><?php echo ($value['content']); ?>.</p>
+					<h3><a href="details">Lorem Ipsum is simply  text</a></h3>
+					<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's.</p>
 				</div>
 			</div>
-			<?php } ?>
+			<div class="span1_of_3">
+				<a href="details"><img src="__PUBLIC__/images/pic5.jpg" alt=""/></a>
+				<div class="span1_of_3_text">
+					<h3><a href="details">Lorem Ipsum is simply  text</a></h3>
+					<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's.</p>
+				</div>
+			</div>
+			<div class="span1_of_3">
+				<a href="details"><img src="__PUBLIC__/images/pic6.jpg" alt=""/></a>
+				<div class="span1_of_3_text">
+					<h3><a href="details">Lorem Ipsum is simply  text</a></h3>
+					<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's.</p>
+				</div>
+			</div>
 			<div class="clear"></div>
 		</div>
 		<!-- end grids_of_3 -->
@@ -268,7 +303,7 @@ $(window).load(function() {
 		<!-- start span_of_4 -->
 		<div class="span_of_4">
 			<div class="span1_of_4">
-				<h4>热门文章</h4>
+				<h4>popular post</h4>
 				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
 				<ul class="f_nav1">
 					<li class="timer"><a href="#">25-september 2013 </a></li>
@@ -279,21 +314,21 @@ $(window).load(function() {
 				</ul>
 			</div>
 			<div class="span1_of_4">
-				<h4>特色文章</h4>
+				<h4>tags</h4>
 				<p>It is a long established fact that a reader will be distracted by the<big>readable</big> content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal <big>blog</big> Many desktop publishing packages and web page editors now use Lorem.</p>
 			</div>
 			<div class="span1_of_4">
-				<h4>关于我们</h4>
+				<h4>a little about us</h4>
 				<p class="btm">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
 				<p>It is a long established fact that a reader will be of a page when looking at its layout.</p>
 
 			</div>
 			<div class="span1_of_4">
-				<h4>保持联系</h4>
+				<h4>get in touch</h4>
 				<p class="btm">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since</p>
-				<p class="btm1 pin">湖南常德</p>
-				<p class="btm1 mail"><a href="mailto:276595510@qq.com">给我发邮件</a></p>
-				<p class="call">18711665602</p>
+				<p class="btm1 pin">Texas, US</p>
+				<p class="btm1 mail"><a href="mailto:info@mycompany.com">info(at)mycompany.com </a></p>
+				<p class="call">01234 444 777</p>
 			</div>
 			<div class="clear"></div>
 		</div>

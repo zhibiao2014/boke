@@ -49,7 +49,7 @@
 				<li><a href="index">主页</a></li>
 				<li class="active"><a href="about">关于我们</a></li>
 				<li><a href="service">服务</a></li>
-				<li><a href="index">页面</a></li>
+				<li><a href="details">页面</a></li>
 				<li><a href="blog">博客</a></li>
 				<li><a href="contact">联系我们</a></li>
 			</ul>
@@ -65,7 +65,7 @@
 				<li><a href="index">主页</a></li>
 				<li class="active"><a href="about">关于我们</a></li>
 				<li><a href="service">服务</a></li>
-				<li><a href="index">页面</a></li>
+				<li><a href="details">页面</a></li>
 				<li><a href="blog">博客</a></li>
 				<li><a href="contact">联系我们</a></li>
             </ul>

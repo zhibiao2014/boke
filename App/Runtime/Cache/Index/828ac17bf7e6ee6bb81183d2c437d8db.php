@@ -45,12 +45,12 @@
 	<div class="header_sub">
 		<div class="h_menu">
 			<ul>
-				<li><a href="index">主页</a></li>
-				<li><a href="about">关于我们</a></li>
-				<li><a href="service">服务</a></li>
-				<li><a href="index">页面</a></li>
-				<li class="active"><a href="blog">博客</a></li>
-				<li><a href="contact">联系我们</a></li>
+				<li><a href="<?php echo U('index');?>">主页</a></li>
+				<li><a href="<?php echo U('about');?>">关于我们</a></li>
+				<li><a href="<?php echo U('service');?>">服务</a></li>
+				<li><a href="<?php echo U('details');?>">页面</a></li>
+				<li class="active"><a href="<?php echo U('blog');?>">博客</a></li>
+				<li><a href="<?php echo U('contact');?>">联系我们</a></li>
 			</ul>
 		</div>
 		<div class="h_search">
@@ -61,12 +61,12 @@
 		</div>
         <div class="menu">
         	<ul>
-				<li><a href="index">主页</a></li>
-				<li><a href="about">关于我们</a></li>
-				<li><a href="service">服务</a></li>
-				<li><a href="index">页面</a></li>
-				<li class="active"><a href="blog">博客</a></li>
-				<li><a href="contact">联系我们</a></li>
+				<li><a href="<?php echo U('index');?>">主页</a></li>
+				<li><a href="<?php echo U('about');?>">关于我们</a></li>
+				<li><a href="<?php echo U('service');?>">服务</a></li>
+				<li><a href="<?php echo U('details');?>">页面</a></li>
+				<li class="active"><a href="<?php echo U('blog');?>">博客</a></li>
+				<li><a href="<?php echo U('contact');?>">联系我们</a></li>
             </ul>
         </div>
         <div class="search">

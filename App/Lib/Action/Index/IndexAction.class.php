@@ -1,6 +1,8 @@
 <?php  
 Class IndexAction extends Action {
 	public function index(){
+		$db=M('boke');
+		$this->bokes=$db->select();
 		$this->display();
 	}
 	public function blog(){
