@@ -6,5 +6,6 @@ Class CommonAction extends Action {
 		{
 			redirect(U('Admin/Login/index'));
 		}
+	}
 }
 ?>

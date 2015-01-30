@@ -38,14 +38,17 @@ Class LoginAction extends Action
 			'loginip' => get_client_ip()
 			);
 		$db->save($data);
-
+		$_SESSION['uid']= $user['id'];
 		session('uid', $user['id']);
 		session('username', $user['username']);
 		session('logintime', date('Y-m-d H:i', $user['logintime']));
 		session('now', date('Y-m-d H:i', time()));
 		session('loginip', $user['loginip']);
 		session('admin', $user['admin']);
+		var_dump($_SESSION['uid']);
+		exit();
 		$this->success('正在登录...', __APP__.'/Admin/Index/index');
+
 	}
 		
 	Public function verify () 
