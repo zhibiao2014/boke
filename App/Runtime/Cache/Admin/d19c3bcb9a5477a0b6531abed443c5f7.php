@@ -1,44 +1,75 @@
 <?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-
-<title>界面管理</title>
-<link href="CSS_PATH/style.css" rel="stylesheet" type="text/css" />
-
-<link rel="stylesheet" type="text/css" href="CSS_PATH/style.css" />
-<script type="text/javascript" src="JS_PATH/js.js"></script>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+	<title>博客后台管理中心</title>
+	<link rel="stylesheet" href="__PUBLIC__/Css/index.css" />
+	<script type="text/javascript" src='__PUBLIC__/Js/jquery-1.8.2.min.js'></script>
+	<script type="text/javascript" src='__PUBLIC__/Js/index.js'></script>
+	<base target="iframe" />
 </head>
-<body id="index">
-
-
-<h1>控制面板</h1>
-<ul id="globalNav">
-	<li><a href="#">我的文章</a>
-		<ul>
-			<li><a href="#" target="frameBord">&nbsp&nbsp&nbsp新文章</a></li>
-			<li><a href="#" target="frameBord">&nbsp&nbsp&nbsp文章列表</a></li>
+<body>
+	<div id="top">
+		<div class='logo'></div>
+		<div class='t_title'>后台管理中心</div>
+		<div class='menu'>
+			<ul>
+				<li class='first first_cur'>
+					<a href="<?php echo U('copy');?>"><span>首&nbsp;页</span></a>
+				</li>
+				<li class='next'>
+					<a href="<?php echo U('User/index');?>"><span>用户管理</span></a>
+				</li>
+				<li>
+					<a href="<?php echo U('Weibo/index');?>"><span>博客管理</span></a>
+				</li>
+				<li class='last'>
+					<a href="<?php echo U('System/index');?>"><span>系统设置</span><div></div></a>
+				</li>
+			</ul>
+			<div id='user'>
+				<span class='user_state'>当前管理员：[<span><?php echo (session('username')); ?></span>]</span>
+				<a href="<?php echo U('loginOut');?>" target='_self' id='login_out'></a>
+			</div>
+		</div>
+	</div>
+	<div id='left'>
+		<div class='nav'>
+			<div class="nav_u"><span class="pos down">用户管理</span></div>
+		</div>
+		<ul class='option'>
+			<li><a href='<?php echo U("User/index");?>'>博客用户</a></li>
+			<li><a href='<?php echo U("User/sechUser");?>'>博客用户检索</a></li>
+			<li><a href='<?php echo U("User/admin");?>'>后台管理员</a></li>
+			<?php if(!$_SESSION["admin"]): ?><li><a href='<?php echo U("User/addAdmin");?>'>添加管理员</a></li><?php endif; ?>
 		</ul>
-	</li>
-	<li><a href="a"  target="frameBord">我的评论</a></li>
-	<li><a href="b">用户管理</a>
-		<ul>
-			<li><a href="#">&nbsp&nbsp&nbsp新用户</a></li>
-			<li><a href="#">&nbsp&nbsp&nbsp用户列表</a></li>
-		</ul>
-	</li>
-	<li><a href="c">我的站点</a>
-		<ul>
-			<li><a href="#">&nbsp&nbsp&nbsp新站点</a></li>
-			<li><a href="#">&nbsp&nbsp&nbsp我的站点</a></li>
-		</ul>
-	</li>
-	<li><a href="../Index/login">退出</a></li>
-</ul>
 
-<iframe id="frameBord" name="frameBord" frameborder="0" height="650px" width="1000px">	
-<h1>欢迎来到我的后台！</h1>
-</iframe>
-
+		<div class='nav'>
+			<div class="nav_u"><span class="pos down">博客管理</span></div>
+		</div>
+		<ul class='option'>
+			<li><a href='<?php echo U("Weibo/index");?>'>原作博客</a></li>
+			<li><a href='<?php echo U("Weibo/turn");?>'>转发博客</a></li>
+			<li><a href='<?php echo U("Weibo/sechWeibo");?>'>博客检索</a></li>
+		</ul>
+		<div class='nav'>
+			<div class="nav_u"><span class="pos down">评论管理</span></div>
+		</div>
+		<ul class='option'>
+			<li><a href='<?php echo U("Weibo/comment");?>'>评论列表</a></li>
+			<li><a href='<?php echo U("Weibo/sechComment");?>'>评论检索</a></li>
+		</ul>
+		<div class='nav'>
+			<div class="nav_u"><span class="pos down">系统设置</span></div>
+		</div>
+		<ul class='option'>
+			<li><a href='<?php echo U("System/filter");?>'>关键字过滤</a></li>
+			<li><a href='<?php echo U("System/index");?>'>网站设置</a></li>
+			<li><a href='<?php echo U("User/editPwd");?>'>修改密码</a></li>
+		</ul>
+	</div>
+	<div id="right">
+		<iframe src="<?php echo U('copy');?>" frameborder="0" name='iframe'></iframe>
+	</div>
 </body>
 </html>

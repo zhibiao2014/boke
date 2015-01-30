@@ -14,6 +14,7 @@ Class IndexAction extends Action
 		$this->display();
 	}
 
+	
 	public function login(){
 
 		$this->display();
