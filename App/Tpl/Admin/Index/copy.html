@@ -16,9 +16,7 @@
 		<dl>
 			<dt>个人信息</dt>
 			<dd>上一次登录时间：<span>{$Think.session.logintime}</span></dd>
-			<dd>上一次登录IP：<span>{$Think.session.loginip}</span></dd>
 			<dd>本次登录时间：<span>{$Think.session.now}</span></dd>
-			<dd>本次登录IP：<span>{:get_client_ip()}</span></dd>
 		</dl>
 		<dl>
 			<dt>服务器信息</dt>
@@ -34,7 +32,7 @@
 		</dl>
 		<dl>
 			<dt>博客信息</dt>
-			<dd>原作博客：<span>{$weibo}</span>条</dd>
+			<dd>原作博客：<span>{$boke}</span>条</dd>
 			<dd>转发博客：<span>{$turn}</span>条</dd>
 			<dd>评论总数：<span>{$comment}</span>条</dd>
 		</dl>

@@ -21,14 +21,14 @@
 					<a href="<?php echo U('User/index');?>"><span>用户管理</span></a>
 				</li>
 				<li>
-					<a href="<?php echo U('Weibo/index');?>"><span>博客管理</span></a>
+					<a href="<?php echo U('Boke/index');?>"><span>博客管理</span></a>
 				</li>
 				<li class='last'>
 					<a href="<?php echo U('System/index');?>"><span>系统设置</span><div></div></a>
 				</li>
 			</ul>
 			<div id='user'>
-				<span class='user_state'>当前管理员：[<span><?php echo (session('username')); ?></span>]</span>
+				<span class='user_state'>当前管理员：[<?php echo ($user['name']); ?>]</span>
 				<a href="<?php echo U('loginOut');?>" target='_self' id='login_out'></a>
 			</div>
 		</div>
@@ -48,16 +48,16 @@
 			<div class="nav_u"><span class="pos down">博客管理</span></div>
 		</div>
 		<ul class='option'>
-			<li><a href='<?php echo U("Weibo/index");?>'>原作博客</a></li>
-			<li><a href='<?php echo U("Weibo/turn");?>'>转发博客</a></li>
-			<li><a href='<?php echo U("Weibo/sechWeibo");?>'>博客检索</a></li>
+			<li><a href='<?php echo U("Boke/index");?>'>原作博客</a></li>
+			<li><a href='<?php echo U("Boke/turn");?>'>转发博客</a></li>
+			<li><a href='<?php echo U("Boke/sechBoke");?>'>博客检索</a></li>
 		</ul>
 		<div class='nav'>
 			<div class="nav_u"><span class="pos down">评论管理</span></div>
 		</div>
 		<ul class='option'>
-			<li><a href='<?php echo U("Weibo/comment");?>'>评论列表</a></li>
-			<li><a href='<?php echo U("Weibo/sechComment");?>'>评论检索</a></li>
+			<li><a href='<?php echo U("Boke/comment");?>'>评论列表</a></li>
+			<li><a href='<?php echo U("Boke/sechComment");?>'>评论检索</a></li>
 		</ul>
 		<div class='nav'>
 			<div class="nav_u"><span class="pos down">系统设置</span></div>

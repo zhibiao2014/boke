@@ -3,22 +3,26 @@
 *
 */
 Class IndexAction extends Action
-{
-	protected $db;
-	
+{	
 	public function index()
 	{	
-		$this->db = D('Admin/Index');	
-		$data=$this->db->select();
-		$this->assign('data',$data);
+		$db = M('users');
+		$this->user=$db->find($id);
+		$this->display();
+	}
+	public function copy()
+	{
+		$db = M('users');
+		$this->user=$db->count();
+		$this->lock=$db->where( array( 'lock'=>1 ) )->count();
 		$this->display();
 	}
 
-	
-	public function login(){
 
-		$this->display();
-
+	public function loginOut(){
+		session_unset();
+		session_destroy();
+		redirect(U('Login/index'));
 	}
 }
 ?>
