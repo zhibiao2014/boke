@@ -26,7 +26,7 @@
 <div class="wrap">
 	<div class="header">
 		<div class="logo">
-			<a href="index.html"><img src="__PUBLIC__/images/logo.png" alt=""/> </a>
+			<a href="index"><img src="__PUBLIC__/images/logo.png" alt=""/> </a>
 		</div>
 		<div class="social-icons">
 		    <ul>
@@ -46,12 +46,12 @@
 	<div class="header_sub">
 		<div class="h_menu">
 			<ul>
-				<li class="active"><a href="index.html">Home</a></li>
-				<li><a href="about.html">About us</a></li>
-				<li><a href="service.html">Service</a></li>
-				<li><a href="index.html">Pages</a></li>
-				<li><a href="blog.html">Blog</a></li>
-				<li><a href="contact.html">Contact us</a></li>
+				<li><a href="index">主页</a></li>
+				<li class="active"><a href="about">关于我们</a></li>
+				<li><a href="service">服务</a></li>
+				<li><a href="index">页面</a></li>
+				<li><a href="blog">博客</a></li>
+				<li><a href="contact">联系我们</a></li>
 			</ul>
 		</div>
 		<div class="h_search">
@@ -62,16 +62,16 @@
 		</div>
         <div class="menu">
         	<ul>
-				<li class="active"><a href="index.html">Home</a></li>
-				<li><a href="about.html">About us</a></li>
-				<li><a href="service.html">Service</a></li>
-				<li><a href="index.html">Pages</a></li>
-				<li><a href="blog.html">Blog</a></li>
-				<li><a href="contact.html">Contact us</a></li>
+				<li><a href="index">主页</a></li>
+				<li class="active"><a href="about">关于我们</a></li>
+				<li><a href="service">服务</a></li>
+				<li><a href="index">页面</a></li>
+				<li><a href="blog">博客</a></li>
+				<li><a href="contact">联系我们</a></li>
             </ul>
         </div>
         <div class="search">
-            <form action="/iphone/search.html">
+            <form action="/iphone/search">
                 <input type="text" value="Search" onFocus="this.value = '';" onBlur="if (this.value == '') {this.value = 'Search';}" class="text">
             </form>
         </div>
@@ -123,13 +123,13 @@
 	       	<p class="para">Lorem Ipsum is simply dummy text of the printing and typesetting industry., Lorem Ipsum  dummy text ever since dummy text of the printing and usings 1500s,Duis aute irure dolor in reprehenderit in voluptate velit esse when an,Lorem Ipsum has been the industry's standard dummy text ever since dummy text of the printing and usings 1500s, </p>
 	       	<p class="para">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.</p>
 			<div class="read_more">
-				 <a class="btn" href="details.html">read more</a>
+				 <a class="btn" href="details">read more</a>
 			</div>
 	       	</div>
 	      	 <div class="clear"></div>
 	      	</div>
 			 <div class="cont-grid-img img_style">
-	     		<a href="details.html"><img src="__PUBLIC__/images/about_pic.jpg" alt=""></a>
+	     		<a href="details"><img src="__PUBLIC__/images/about_pic.jpg" alt=""></a>
 	     	</div>	      	
 	      	<div class="clear"></div>
 	    	<div class="about-p">
@@ -137,7 +137,7 @@
 				<p class="para">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since dummy text of the printing and usings 1500s,Duis aute irure dolor in reprehenderit in voluptate velit Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since dummy text of the printing and usings 1500s,Duis aute irure dolor in reprehenderit in voluptate velit</p>
 				<p class="para">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.</p>
 				<div class="read_more">
-					<a class="btn" href="details.html">read more</a>
+					<a class="btn" href="details">read more</a>
 				</div>
 		</div>
 		</div>

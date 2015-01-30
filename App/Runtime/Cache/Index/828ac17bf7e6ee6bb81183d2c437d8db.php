@@ -2,12 +2,11 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>Services</title>
+<title>我的博客</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <link href='__PUBLIC__/css/google.css' rel='stylesheet' type='text/css'>
 <link href="__PUBLIC__/css/style.css" rel="stylesheet" type="text/css" media="all" />
-<!-- start top_js_button -->
 <script type="text/javascript" src="__PUBLIC__/js/jquery.min.js"></script>
 <script type="text/javascript" src="__PUBLIC__/js/move-top.js"></script>
 <script type="text/javascript" src="__PUBLIC__/js/easing.js"></script>
@@ -48,9 +47,9 @@
 			<ul>
 				<li><a href="index">主页</a></li>
 				<li><a href="about">关于我们</a></li>
-				<li class="active"><a href="service">服务</a></li>
+				<li><a href="service">服务</a></li>
 				<li><a href="index">页面</a></li>
-				<li><a href="blog">博客</a></li>
+				<li class="active"><a href="blog">博客</a></li>
 				<li><a href="contact">联系我们</a></li>
 			</ul>
 		</div>
@@ -64,9 +63,9 @@
         	<ul>
 				<li><a href="index">主页</a></li>
 				<li><a href="about">关于我们</a></li>
-				<li class="active"><a href="service">服务</a></li>
+				<li><a href="service">服务</a></li>
 				<li><a href="index">页面</a></li>
-				<li><a href="blog">博客</a></li>
+				<li class="active"><a href="blog">博客</a></li>
 				<li><a href="contact">联系我们</a></li>
             </ul>
         </div>
@@ -77,8 +76,8 @@
         </div>
         <div class="sub-head">
         	<ul>
-            	<li><a href="#" id="menu">Menu  <span></span></a></li>
-            	<li><a href="#" id="search">Search <span></span></a></li>
+            	<li><a href="#" id="menu">菜单  <span></span></a></li>
+            	<li><a href="#" id="search">搜索 <span></span></a></li>
             </ul>
             <div class="clear"></div>
         </div>
@@ -109,83 +108,49 @@
 <div class="top_bg">
 <div class="wrap">
 	<div class="top">
-		<h2>our services</h2>
+		<h2>最近文章</h2>
  	</div>
 </div>
 </div>
 <!-- start main -->
 <div class="wrap">
 <div class="main">
-		<!-- start span_of_3 -->
-		<div class="span_of_3">
-			<div class="span1_of_3">
-				<a href="details"><img src="__PUBLIC__/images/pic1.jpg" alt=""></a>
-				<div class="span1_of_3_text">
-					<h3><a href="details">Lorem Ipsum is simply  text</a></h3>
-					<p>Lorem Ipsum is simply sit amet consectetur dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's.</p>
+		<div class="blog">
+			<div class="blog_list">
+				<h2>Lorem Ipsum is simply dummy text of the printing text</h2>
+				<h5>January 3rd, 2013 , Posted by&nbsp;<a href="index">H. Rackham</a></h5>
+				<div class="blog_para">
+					<p class="para"><a  href="details"><img src="__PUBLIC__/images/blog1.jpg" alt=""></a>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue;</p>
+					<div class="read_more">
+						 <a class="btn" href="details">读取全文</a>
+					</div>
+					<div class="clear"></div>
 				</div>
-				<div class="ser_btn">
-					<a class="button  ser_btn1" href="details">read more</a>
+			 </div>
+			<div class="blog_list">
+				<h2>There are many variations of passages popular belief</h2>
+				<h5>march  26th, 2013 , Posted by&nbsp;<a href="index">J. Smith</a></h5>
+				<div class="blog_para">
+					<p class="para"><a  href="details"><img src="__PUBLIC__/images/blog2.jpg" alt=""></a>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem IpsumOn the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment,</p>
+					<div class="read_more">
+						 <a class="btn" href="details">读取全文</a>
+					</div>
 				</div>
+			   <div class="clear"></div>				
+			 </div>
+			<div class="blog_list">
+				<h2>The standard chunk of Lorem Ipsum used since</h2>
+				<h5>Auguest 3rd, 2013 , Posted by&nbsp;<a href="index">H. Rackham</a></h5>
+				<div class="blog_para">
+					<p class="para"><a  href="details"><img src="__PUBLIC__/images/blog3.jpg" alt=""></a>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem IpsumOn the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment,</p>
+					<div class="read_more">
+						 <a class="btn" href="details">读取全文</a>
+					</div>
+				</div>
+			   <div class="clear"></div>				
+			 </div>		 
 			</div>
-			<div class="span1_of_3">
-				<a href="details"><img src="__PUBLIC__/images/pic2.jpg" alt=""></a>
-				<div class="span1_of_3_text">
-					<h3><a href="details">Lorem Ipsum is simply  text</a></h3>
-					<p>Lorem Ipsum is simply sit amet consectetur dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's.</p>
-				</div>
-				<div class="ser_btn">
-					<a class="button  ser_btn1" href="details">read more</a>
-				</div>
-			</div>
-			<div class="span1_of_3">
-				<a href="details"><img src="__PUBLIC__/images/pic3.jpg" alt=""></a>
-				<div class="span1_of_3_text">
-					<h3><a href="details">Lorem Ipsum is simply  text</a></h3>
-					<p>Lorem Ipsum is simply sit amet consectetur dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's.</p>
-				</div>
-				<div class="ser_btn">
-					<a class="button  ser_btn1" href="details">read more</a>
-				</div>
-			</div>
-			<div class="clear"></div>
 		</div>
-		<!--  -->
-		<div class="span_of_3">
-			<div class="span1_of_3">
-				<a href="details"><img src="__PUBLIC__/images/pic4.jpg" alt=""></a>
-				<div class="span1_of_3_text">
-					<h3><a href="details">Lorem Ipsum is simply  text</a></h3>
-					<p>Lorem Ipsum is simply sit amet consectetur dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's.</p>
-				</div>
-				<div class="ser_btn">
-					<a class="button  ser_btn1" href="details">read more</a>
-				</div>
-			</div>
-			<div class="span1_of_3">
-				<a href="details"><img src="__PUBLIC__/images/pic5.jpg" alt=""></a>
-				<div class="span1_of_3_text">
-					<h3><a href="details">Lorem Ipsum is simply  text</a></h3>
-					<p>Lorem Ipsum is simply sit amet consectetur dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's.</p>
-				</div>
-				<div class="ser_btn">
-					<a class="button  ser_btn1" href="details">read more</a>
-				</div>
-			</div>
-			<div class="span1_of_3">
-				<a href="details"><img src="__PUBLIC__/images/pic6.jpg" alt=""></a>
-				<div class="span1_of_3_text">
-					<h3><a href="details">Lorem Ipsum is simply  text</a></h3>
-					<p>Lorem Ipsum is simply sit amet consectetur dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's.</p>
-				</div>
-				<div class="ser_btn">
-					<a class="button  ser_btn1" href="details">read more</a>
-				</div>
-			</div>
-			<div class="clear"></div>
-		</div>
-		<!-- end grids_of_3 -->
-	</div>
 </div>
 <!-- start footer -->
 <div class="footer_bg">
@@ -194,7 +159,7 @@
 		<!-- start span_of_4 -->
 		<div class="span_of_4">
 			<div class="span1_of_4">
-				<h4>popular post</h4>
+				<h4>热门文章</h4>
 				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
 				<ul class="f_nav1">
 					<li class="timer"><a href="#">25-september 2013 </a></li>
@@ -205,21 +170,21 @@
 				</ul>
 			</div>
 			<div class="span1_of_4">
-				<h4>tags</h4>
+				<h4>特色文章</h4>
 				<p>It is a long established fact that a reader will be distracted by the<big>readable</big> content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal <big>blog</big> Many desktop publishing packages and web page editors now use Lorem.</p>
 			</div>
 			<div class="span1_of_4">
-				<h4>a little about us</h4>
+				<h4>关于我们</h4>
 				<p class="btm">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
 				<p>It is a long established fact that a reader will be of a page when looking at its layout.</p>
 
 			</div>
 			<div class="span1_of_4">
-				<h4>get in touch</h4>
+				<h4>保持联系</h4>
 				<p class="btm">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since</p>
-				<p class="btm1 pin">Texas, US</p>
-				<p class="btm1 mail"><a href="mailto:info@mycompany.com">info(at)mycompany.com </a></p>
-				<p class="call">01234 444 777</p>
+				<p class="btm1 pin">湖南常德</p>
+				<p class="btm1 mail"><a href="mailto:276595510@qq.com">给我发邮件</a></p>
+				<p class="call">18711665602</p>
 			</div>
 			<div class="clear"></div>
 		</div>
@@ -247,7 +212,7 @@
 			});
 		</script>
 		 <a href="#" id="toTop" style="display: block;"><span id="toTopHover" style="opacity: 1;"></span></a>
-		<!--end scroll_top_btn -->
+		<!--end scroll_top_btn -->		
 		<div class="social-icons">
 		    <ul>
 		      <li><a href="#" target="_blank"></a></li>
@@ -256,7 +221,6 @@
 			  <li><a href="#" target="_blank"></a></li>
 			</ul>
 		</div>
-|
 		<div class="clear"></div>
 	</div>
 </div>

@@ -2,7 +2,7 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>Services</title>
+<title>Contact</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <link href='__PUBLIC__/css/google.css' rel='stylesheet' type='text/css'>
@@ -48,10 +48,10 @@
 			<ul>
 				<li><a href="index">主页</a></li>
 				<li><a href="about">关于我们</a></li>
-				<li class="active"><a href="service">服务</a></li>
+				<li><a href="service">服务</a></li>
 				<li><a href="index">页面</a></li>
 				<li><a href="blog">博客</a></li>
-				<li><a href="contact">联系我们</a></li>
+				<li class="active"><a href="contact">联系我们</a></li>
 			</ul>
 		</div>
 		<div class="h_search">
@@ -64,10 +64,10 @@
         	<ul>
 				<li><a href="index">主页</a></li>
 				<li><a href="about">关于我们</a></li>
-				<li class="active"><a href="service">服务</a></li>
+				<li><a href="service">服务</a></li>
 				<li><a href="index">页面</a></li>
 				<li><a href="blog">博客</a></li>
-				<li><a href="contact">联系我们</a></li>
+				<li class="active"><a href="contact">联系我们</a></li>
             </ul>
         </div>
         <div class="search">
@@ -98,7 +98,7 @@
 			$(".text").focus();
 		});
 	</script>
-	<script type="text/javascript" src="__PUBLIC__/js/script.js"></script>
+	<script type="text/javascript" src="js/script.js"></script>
 	<div class="clear"></div>
 
 		<div class="clear"></div>
@@ -109,83 +109,49 @@
 <div class="top_bg">
 <div class="wrap">
 	<div class="top">
-		<h2>our services</h2>
+		<h2>contact us</h2>
  	</div>
 </div>
 </div>
 <!-- start main -->
 <div class="wrap">
-<div class="main">
-		<!-- start span_of_3 -->
-		<div class="span_of_3">
-			<div class="span1_of_3">
-				<a href="details"><img src="__PUBLIC__/images/pic1.jpg" alt=""></a>
-				<div class="span1_of_3_text">
-					<h3><a href="details">Lorem Ipsum is simply  text</a></h3>
-					<p>Lorem Ipsum is simply sit amet consectetur dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's.</p>
-				</div>
-				<div class="ser_btn">
-					<a class="button  ser_btn1" href="details">read more</a>
-				</div>
-			</div>
-			<div class="span1_of_3">
-				<a href="details"><img src="__PUBLIC__/images/pic2.jpg" alt=""></a>
-				<div class="span1_of_3_text">
-					<h3><a href="details">Lorem Ipsum is simply  text</a></h3>
-					<p>Lorem Ipsum is simply sit amet consectetur dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's.</p>
-				</div>
-				<div class="ser_btn">
-					<a class="button  ser_btn1" href="details">read more</a>
-				</div>
-			</div>
-			<div class="span1_of_3">
-				<a href="details"><img src="__PUBLIC__/images/pic3.jpg" alt=""></a>
-				<div class="span1_of_3_text">
-					<h3><a href="details">Lorem Ipsum is simply  text</a></h3>
-					<p>Lorem Ipsum is simply sit amet consectetur dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's.</p>
-				</div>
-				<div class="ser_btn">
-					<a class="button  ser_btn1" href="details">read more</a>
-				</div>
-			</div>
-			<div class="clear"></div>
+	<div class="main">
+	 	 <div class="contact">				
+					<div class="contact_info">
+						<h2 class="style">get in touch</h2>
+			    	 		<div class="map">
+					   			<iframe width="100%" height="250" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src=""></iframe><br><small><a href="" style="color:#777777;text-align:left;font-size:13px;">View Larger Map</a></small>
+					   		</div>
+      				</div>
+				  <div class="contact-form">
+			 	 <div class="content">
+		 	 	<h2>Contact Us</h2>
+		 	 </div>
+					    <form method="post" action="contact-post">
+					    	<div>
+						    	<span><label>Name</label></span>
+						    	<span><input name="userName" type="text" class="textbox"></span>
+						    </div>
+						    <div>
+						    	<span><label>E-mail</label></span>
+						    	<span><input name="userEmail" type="text" class="textbox"></span>
+						    </div>
+						    <div>
+						     	<span><label>Mobile</label></span>
+						    	<span><input name="userPhone" type="text" class="textbox"></span>
+						    </div>
+						    <div>
+						    	<span><label>Subject</label></span>
+						    	<span><textarea name="userMsg"> </textarea></span>
+						    </div>
+						   <div>
+						   		<span><input type="submit" class="" value="Submit us"></span>
+						  </div>
+					    </form>
+				    </div>
+  				<div class="clear"> </div>		
+			  </div>
 		</div>
-		<!--  -->
-		<div class="span_of_3">
-			<div class="span1_of_3">
-				<a href="details"><img src="__PUBLIC__/images/pic4.jpg" alt=""></a>
-				<div class="span1_of_3_text">
-					<h3><a href="details">Lorem Ipsum is simply  text</a></h3>
-					<p>Lorem Ipsum is simply sit amet consectetur dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's.</p>
-				</div>
-				<div class="ser_btn">
-					<a class="button  ser_btn1" href="details">read more</a>
-				</div>
-			</div>
-			<div class="span1_of_3">
-				<a href="details"><img src="__PUBLIC__/images/pic5.jpg" alt=""></a>
-				<div class="span1_of_3_text">
-					<h3><a href="details">Lorem Ipsum is simply  text</a></h3>
-					<p>Lorem Ipsum is simply sit amet consectetur dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's.</p>
-				</div>
-				<div class="ser_btn">
-					<a class="button  ser_btn1" href="details">read more</a>
-				</div>
-			</div>
-			<div class="span1_of_3">
-				<a href="details"><img src="__PUBLIC__/images/pic6.jpg" alt=""></a>
-				<div class="span1_of_3_text">
-					<h3><a href="details">Lorem Ipsum is simply  text</a></h3>
-					<p>Lorem Ipsum is simply sit amet consectetur dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's.</p>
-				</div>
-				<div class="ser_btn">
-					<a class="button  ser_btn1" href="details">read more</a>
-				</div>
-			</div>
-			<div class="clear"></div>
-		</div>
-		<!-- end grids_of_3 -->
-	</div>
 </div>
 <!-- start footer -->
 <div class="footer_bg">

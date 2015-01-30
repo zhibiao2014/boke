@@ -41,7 +41,7 @@
 <div class="wrap">
 	<div class="header">
 		<div class="logo">
-			<a href="index.html"><img src="__PUBLIC__/images/logo.png" alt=""/> </a>
+			<a href="index"><img src="__PUBLIC__/images/logo.png" alt=""/> </a>
 		</div>
 		<div class="social-icons">
 		    <ul>
@@ -61,12 +61,12 @@
 	<div class="header_sub">
 		<div class="h_menu">
 			<ul>
-				<li class="active"><a href="index.html">Home</a></li>
-				<li><a href="about.html">About us</a></li>
-				<li><a href="service.html">Service</a></li>
-				<li><a href="index.html">Pages</a></li>
-				<li><a href="blog.html">Blog</a></li>
-				<li><a href="contact.html">Contact us</a></li>
+				<li><a href="index">主页</a></li>
+				<li><a href="about">关于我们</a></li>
+				<li><a href="service">服务</a></li>
+				<li class="active"><a href="index">页面</a></li>
+				<li><a href="blog">博客</a></li>
+				<li><a href="contact">联系我们</a></li>
 			</ul>
 		</div>
 		<div class="h_search">
@@ -77,16 +77,16 @@
 		</div>
         <div class="menu">
         	<ul>
-				<li class="active"><a href="index.html">Home</a></li>
-				<li><a href="about.html">About us</a></li>
-				<li><a href="service.html">Service</a></li>
-				<li><a href="index.html">Pages</a></li>
-				<li><a href="blog.html">Blog</a></li>
-				<li><a href="contact.html">Contact us</a></li>
+				<li><a href="index">主页</a></li>
+				<li><a href="about">关于我们</a></li>
+				<li><a href="service">服务</a></li>
+				<li class="active"><a href="index">页面</a></li>
+				<li><a href="blog">博客</a></li>
+				<li><a href="contact">联系我们</a></li>
             </ul>
         </div>
         <div class="search">
-            <form action="/iphone/search.html">
+            <form action="/iphone/search">
                 <input type="text" value="Search" onFocus="this.value = '';" onBlur="if (this.value == '') {this.value = 'Search';}" class="text">
             </form>
         </div>
@@ -187,23 +187,23 @@
 		<!-- start span_of_3 -->
 		<div class="span_of_3">
 			<div class="span1_of_3">
-				<a href="details.html"><img src="__PUBLIC__/images/pic1.jpg" alt=""/></a>
+				<a href="details"><img src="__PUBLIC__/images/pic1.jpg" alt=""/></a>
 				<div class="span1_of_3_text">
-					<h3><a href="details.html">Lorem Ipsum is simply  text</a></h3>
+					<h3><a href="details">Lorem Ipsum is simply  text</a></h3>
 					<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's.</p>
 				</div>
 			</div>
 			<div class="span1_of_3">
-				<a href="details.html"><img src="__PUBLIC__/images/pic2.jpg" alt=""/></a>
+				<a href="details"><img src="__PUBLIC__/images/pic2.jpg" alt=""/></a>
 				<div class="span1_of_3_text">
-					<h3><a href="details.html">Lorem Ipsum is simply  text</a></h3>
+					<h3><a href="details">Lorem Ipsum is simply  text</a></h3>
 					<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's.</p>
 				</div>
 			</div>
 			<div class="span1_of_3">
-				<a href="details.html"><img src="__PUBLIC__/images/pic3.jpg" alt=""/></a>
+				<a href="details"><img src="__PUBLIC__/images/pic3.jpg" alt=""/></a>
 				<div class="span1_of_3_text">
-					<h3><a href="details.html">Lorem Ipsum is simply  text</a></h3>
+					<h3><a href="details">Lorem Ipsum is simply  text</a></h3>
 					<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's.</p>
 				</div>
 			</div>
@@ -212,23 +212,23 @@
 		<!--  -->
 		<div class="span_of_3">
 			<div class="span1_of_3">
-				<a href="details.html"><img src="__PUBLIC__/images/pic4.jpg" alt=""/></a>
+				<a href="details"><img src="__PUBLIC__/images/pic4.jpg" alt=""/></a>
 				<div class="span1_of_3_text">
-					<h3><a href="details.html">Lorem Ipsum is simply  text</a></h3>
+					<h3><a href="details">Lorem Ipsum is simply  text</a></h3>
 					<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's.</p>
 				</div>
 			</div>
 			<div class="span1_of_3">
-				<a href="details.html"><img src="__PUBLIC__/images/pic5.jpg" alt=""/></a>
+				<a href="details"><img src="__PUBLIC__/images/pic5.jpg" alt=""/></a>
 				<div class="span1_of_3_text">
-					<h3><a href="details.html">Lorem Ipsum is simply  text</a></h3>
+					<h3><a href="details">Lorem Ipsum is simply  text</a></h3>
 					<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's.</p>
 				</div>
 			</div>
 			<div class="span1_of_3">
-				<a href="details.html"><img src="__PUBLIC__/images/pic6.jpg" alt=""/></a>
+				<a href="details"><img src="__PUBLIC__/images/pic6.jpg" alt=""/></a>
 				<div class="span1_of_3_text">
-					<h3><a href="details.html">Lorem Ipsum is simply  text</a></h3>
+					<h3><a href="details">Lorem Ipsum is simply  text</a></h3>
 					<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's.</p>
 				</div>
 			</div>

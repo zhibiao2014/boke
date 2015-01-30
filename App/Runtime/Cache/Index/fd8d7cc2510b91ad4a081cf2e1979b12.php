@@ -2,7 +2,7 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>Services</title>
+<title>Details</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <link href='__PUBLIC__/css/google.css' rel='stylesheet' type='text/css'>
@@ -26,7 +26,7 @@
 <div class="wrap">
 	<div class="header">
 		<div class="logo">
-			<a href="index"><img src="__PUBLIC__/images/logo.png" alt=""/> </a>
+			<a href="index.html"><img src="__PUBLIC__/images/logo.png" alt=""/> </a>
 		</div>
 		<div class="social-icons">
 		    <ul>
@@ -46,12 +46,12 @@
 	<div class="header_sub">
 		<div class="h_menu">
 			<ul>
-				<li><a href="index">主页</a></li>
-				<li><a href="about">关于我们</a></li>
-				<li class="active"><a href="service">服务</a></li>
-				<li><a href="index">页面</a></li>
-				<li><a href="blog">博客</a></li>
-				<li><a href="contact">联系我们</a></li>
+				<li class="active"><a href="index.html">Home</a></li>
+				<li><a href="about.html">About us</a></li>
+				<li><a href="service.html">Service</a></li>
+				<li><a href="index.html">Pages</a></li>
+				<li><a href="blog.html">Blog</a></li>
+				<li><a href="contact.html">Contact us</a></li>
 			</ul>
 		</div>
 		<div class="h_search">
@@ -62,16 +62,16 @@
 		</div>
         <div class="menu">
         	<ul>
-				<li><a href="index">主页</a></li>
-				<li><a href="about">关于我们</a></li>
-				<li class="active"><a href="service">服务</a></li>
-				<li><a href="index">页面</a></li>
-				<li><a href="blog">博客</a></li>
-				<li><a href="contact">联系我们</a></li>
+				<li class="active"><a href="index.html">Home</a></li>
+				<li><a href="about.html">About us</a></li>
+				<li><a href="service.html">Service</a></li>
+				<li><a href="index.html">Pages</a></li>
+				<li><a href="blog.html">Blog</a></li>
+				<li><a href="contact.html">Contact us</a></li>
             </ul>
         </div>
         <div class="search">
-            <form action="/iphone/search">
+            <form action="/iphone/search.html">
                 <input type="text" value="Search" onFocus="this.value = '';" onBlur="if (this.value == '') {this.value = 'Search';}" class="text">
             </form>
         </div>
@@ -109,82 +109,27 @@
 <div class="top_bg">
 <div class="wrap">
 	<div class="top">
-		<h2>our services</h2>
+		<h2>welcome to our webworld2</h2>
  	</div>
 </div>
 </div>
 <!-- start main -->
 <div class="wrap">
-<div class="main">
-		<!-- start span_of_3 -->
-		<div class="span_of_3">
-			<div class="span1_of_3">
-				<a href="details"><img src="__PUBLIC__/images/pic1.jpg" alt=""></a>
-				<div class="span1_of_3_text">
-					<h3><a href="details">Lorem Ipsum is simply  text</a></h3>
-					<p>Lorem Ipsum is simply sit amet consectetur dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's.</p>
-				</div>
-				<div class="ser_btn">
-					<a class="button  ser_btn1" href="details">read more</a>
-				</div>
+	<div class="main">
+		<div class="details">
+			<h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit</h2>
+			<div class="det_pic">
+				  <img src="__PUBLIC__/images/det_pic.jpg" alt="" />
 			</div>
-			<div class="span1_of_3">
-				<a href="details"><img src="__PUBLIC__/images/pic2.jpg" alt=""></a>
-				<div class="span1_of_3_text">
-					<h3><a href="details">Lorem Ipsum is simply  text</a></h3>
-					<p>Lorem Ipsum is simply sit amet consectetur dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's.</p>
-				</div>
-				<div class="ser_btn">
-					<a class="button  ser_btn1" href="details">read more</a>
-				</div>
-			</div>
-			<div class="span1_of_3">
-				<a href="details"><img src="__PUBLIC__/images/pic3.jpg" alt=""></a>
-				<div class="span1_of_3_text">
-					<h3><a href="details">Lorem Ipsum is simply  text</a></h3>
-					<p>Lorem Ipsum is simply sit amet consectetur dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's.</p>
-				</div>
-				<div class="ser_btn">
-					<a class="button  ser_btn1" href="details">read more</a>
+			<div class="det_text">
+				<p class="para">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. </p>
+				<p class="para">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics</p>
+				<div class="read_more">
+					 <a class="btn" href="details.html">read more</a>
 				</div>
 			</div>
 			<div class="clear"></div>
 		</div>
-		<!--  -->
-		<div class="span_of_3">
-			<div class="span1_of_3">
-				<a href="details"><img src="__PUBLIC__/images/pic4.jpg" alt=""></a>
-				<div class="span1_of_3_text">
-					<h3><a href="details">Lorem Ipsum is simply  text</a></h3>
-					<p>Lorem Ipsum is simply sit amet consectetur dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's.</p>
-				</div>
-				<div class="ser_btn">
-					<a class="button  ser_btn1" href="details">read more</a>
-				</div>
-			</div>
-			<div class="span1_of_3">
-				<a href="details"><img src="__PUBLIC__/images/pic5.jpg" alt=""></a>
-				<div class="span1_of_3_text">
-					<h3><a href="details">Lorem Ipsum is simply  text</a></h3>
-					<p>Lorem Ipsum is simply sit amet consectetur dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's.</p>
-				</div>
-				<div class="ser_btn">
-					<a class="button  ser_btn1" href="details">read more</a>
-				</div>
-			</div>
-			<div class="span1_of_3">
-				<a href="details"><img src="__PUBLIC__/images/pic6.jpg" alt=""></a>
-				<div class="span1_of_3_text">
-					<h3><a href="details">Lorem Ipsum is simply  text</a></h3>
-					<p>Lorem Ipsum is simply sit amet consectetur dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's.</p>
-				</div>
-				<div class="ser_btn">
-					<a class="button  ser_btn1" href="details">read more</a>
-				</div>
-			</div>
-			<div class="clear"></div>
-		</div>
-		<!-- end grids_of_3 -->
 	</div>
 </div>
 <!-- start footer -->
