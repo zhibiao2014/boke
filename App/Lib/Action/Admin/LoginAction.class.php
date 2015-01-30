@@ -45,7 +45,7 @@ Class LoginAction extends Action
 		session('now', date('Y-m-d H:i', time()));
 		session('loginip', $user['loginip']);
 		session('admin', $user['admin']);
-		$this->success('正在登录...', __APP__.'/Index/index');
+		$this->success('正在登录...', __APP__.'/Admin/Index/index');
 	}
 		
 	Public function verify () 
