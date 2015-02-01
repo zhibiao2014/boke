@@ -115,7 +115,6 @@
 </div>
 </div>
 
-<!-- start slider -->
 <div class="slider_bg">
 <div class="wrap">
 	<div class="slider">
@@ -136,6 +135,8 @@
  	</div>
 </div>
 </div>
+
+
 <!-- start main -->
 <div class="wrap">
 	<div class="main">

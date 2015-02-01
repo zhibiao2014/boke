@@ -115,14 +115,15 @@
 </div>
 </div>
 
-<div class="top_bg">
-<div class="wrap">
-	<div class="top">
-		<h2>最近文章</h2>
- 	</div>
-</div>
-</div>
-<!-- start main -->
+	<div class="top_bg">
+		<div class="wrap">
+			<div class="top">
+				<h2>欢迎来到我的博客</h2>
+			</div>
+		</div>
+	</div>
+
+
 <div class="wrap">
 <div class="main">
 		<div class="blog">
