@@ -38,8 +38,6 @@ Class LoginAction extends Action
 			'loginip' => get_client_ip()
 			);
 		$db->save($data);
-		
-
 		session('uid', $user['user_id']);
 		session('username', $user['name']);
 		session('logintime', date('Y-m-d H:i', $user['logintime']));

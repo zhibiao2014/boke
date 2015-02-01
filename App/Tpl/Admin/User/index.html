@@ -15,37 +15,37 @@
 		<tr>
 			<th>ID</th>
 			<th>用户昵称</th>
-			<th>头像</th>
-			<th>关注信息</th>
+			<!--<th>头像</th>-->
+			<!--<th>关注信息</th>-->
 			<th>注册时间</th>
 			<th>账号状态</th>
 			<th>操作</th>
 		</tr>
-		<foreach name='users' item='v'>
+		<?php foreach ($users as $key =>$value) { ?>
 			<tr>
-				<td width='50' align='center'>{$v.id}</td>
-				<td>{$v.username}</td>
-				<td width='80' align='center'>
+				<td width='50' align='center'>{$value['user_id']}</td>
+				<td>{$value['name']}</td>
+				<!--<td width='80' align='center'>
 					<img src="<if condition='$v["face"]'>__ROOT__/Uploads/Face/{$v.face}<else/>__ROOT__/Public/Images/noface.gif</if>" width='50' height='50'/>
-				</td>
-				<td align='center'>
+				</td>-->
+				<!--<td align='center'>
 					<ul>
 						<li>关注：{$v.follow}</li>
 						<li>粉丝：{$v.fans}</li>
 						<li>微博：{$v.weibo}</li>
 					</ul>
-				</td>
-				<td width='100' align='center'>{$v.registime|date='Y-m-d', ###}</td>
-				<td width='60' align='center'><if condition='$v["lock"]'>锁定</if></td>
+				</td>-->
+				<td width='100' align='center'>{$value['create_at']}</td>
+				<td width='60' align='center'><if condition='$value["lock"]'>锁定</if></td>
 				<td width='100' align='center'>
-					<if condition='$v["lock"]'>
-						<a href="{:U('lockUser', array('id' => $v['id'], 'lock' => 0))}" class='add lock'>解除锁定</a>
+					<if condition='$value["lock"]'>
+						<a href="{:U('lockUser', array('id' => $value['id'], 'lock' => 0))}" class='add lock'>解除锁定</a>
 					<else/>
-						<a href="{:U('lockUser', array('id' => $v['id'], 'lock' => 1))}" class='add lock'>锁定用户</a>
+						<a href="{:U('lockUser', array('id' => $value['id'], 'lock' => 1))}" class='add lock'>锁定用户</a>
 					</if>
 				</td>
 			</tr>
-		</foreach>
+		<?php } ?>
 		<tr height='50'>
 			<td align='center' colspan='7'>{$page}</td>
 		</tr>

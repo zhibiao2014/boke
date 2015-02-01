@@ -28,7 +28,7 @@
 				</li>
 			</ul>
 			<div id='user'>
-				<span class='user_state'>当前管理员：[<?php echo ($user['name']); ?>]</span>
+				<span class='user_state'>当前管理员：[<?php echo ($_SESSION['username']); ?>]</span>
 				<a href="<?php echo U('loginOut');?>" target='_self' id='login_out'></a>
 			</div>
 		</div>

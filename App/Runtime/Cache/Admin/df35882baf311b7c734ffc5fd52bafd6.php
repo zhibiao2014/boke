@@ -15,33 +15,35 @@
 		<tr>
 			<th>ID</th>
 			<th>用户昵称</th>
-			<th>头像</th>
-			<th>关注信息</th>
+			<!--<th>头像</th>-->
+			<!--<th>关注信息</th>-->
 			<th>注册时间</th>
 			<th>账号状态</th>
 			<th>操作</th>
 		</tr>
-		<?php if(is_array($users)): foreach($users as $key=>$v): ?><tr>
-				<td width='50' align='center'><?php echo ($v["id"]); ?></td>
-				<td><?php echo ($v["username"]); ?></td>
-				<td width='80' align='center'>
+		<?php foreach ($users as $key =>$value) { ?>
+			<tr>
+				<td width='50' align='center'><?php echo ($value['user_id']); ?></td>
+				<td><?php echo ($value['name']); ?></td>
+				<!--<td width='80' align='center'>
 					<img src="<?php if($v["face"]): ?>__ROOT__/Uploads/Face/<?php echo ($v["face"]); else: ?>__ROOT__/Public/Images/noface.gif<?php endif; ?>" width='50' height='50'/>
-				</td>
-				<td align='center'>
+				</td>-->
+				<!--<td align='center'>
 					<ul>
 						<li>关注：<?php echo ($v["follow"]); ?></li>
 						<li>粉丝：<?php echo ($v["fans"]); ?></li>
 						<li>微博：<?php echo ($v["weibo"]); ?></li>
 					</ul>
-				</td>
-				<td width='100' align='center'><?php echo (date('Y-m-d', $v["registime"])); ?></td>
-				<td width='60' align='center'><?php if($v["lock"]): ?>锁定<?php endif; ?></td>
+				</td>-->
+				<td width='100' align='center'><?php echo ($value['create_at']); ?></td>
+				<td width='60' align='center'><?php if($value["lock"]): ?>锁定<?php endif; ?></td>
 				<td width='100' align='center'>
-					<?php if($v["lock"]): ?><a href="<?php echo U('lockUser', array('id' => $v['id'], 'lock' => 0));?>" class='add lock'>解除锁定</a>
+					<?php if($value["lock"]): ?><a href="<?php echo U('lockUser', array('id' => $value['id'], 'lock' => 0));?>" class='add lock'>解除锁定</a>
 					<?php else: ?>
-						<a href="<?php echo U('lockUser', array('id' => $v['id'], 'lock' => 1));?>" class='add lock'>锁定用户</a><?php endif; ?>
+						<a href="<?php echo U('lockUser', array('id' => $value['id'], 'lock' => 1));?>" class='add lock'>锁定用户</a><?php endif; ?>
 				</td>
-			</tr><?php endforeach; endif; ?>
+			</tr>
+		<?php } ?>
 		<tr height='50'>
 			<td align='center' colspan='7'><?php echo ($page); ?></td>
 		</tr>

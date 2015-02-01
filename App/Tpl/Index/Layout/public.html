@@ -1,7 +1,7 @@
-<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE HTML>
+<!DOCTYPE HTML>
 <html>
 <head>
-<title>我的博客</title>
+<block name='title'><title>Home</title></block>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <link href='__PUBLIC__/css/google.css' rel='stylesheet' type='text/css'>
@@ -33,7 +33,7 @@
 			});
 		});
 	</script>
-
+<block name='subheader'></block>
 </head>
 <body>
 <!-- start header -->
@@ -60,12 +60,12 @@
 <div class="wrap">
 	<div class="header_sub">
 		<div class="h_menu">
-		
-	<ul>
-		<li><a href="index">主页</a></li>
-		<li class="active"><a href="blog">博客</a></li>
-	</ul>
-
+		<block name='high'>
+			<ul>
+				<li class="active"><a href="index">主页</a></li>
+				<li><a href="blog">博客</a></li>
+			</ul>
+		</block>
 		</div>
 		<div class="h_search">
     		<form>
@@ -114,55 +114,7 @@
 </div>
 </div>
 </div>
-
-<div class="top_bg">
-<div class="wrap">
-	<div class="top">
-		<h2>最近文章</h2>
- 	</div>
-</div>
-</div>
-<!-- start main -->
-<div class="wrap">
-<div class="main">
-		<div class="blog">
-			<div class="blog_list">
-				<h2>Lorem Ipsum is simply dummy text of the printing text</h2>
-				<h5>January 3rd, 2013 , Posted by&nbsp;<a href="index">H. Rackham</a></h5>
-				<div class="blog_para">
-					<p class="para"><a  href="details"><img src="__PUBLIC__/images/blog1.jpg" alt=""></a>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue;</p>
-					<div class="read_more">
-						 <a class="btn" href="details">读取全文</a>
-					</div>
-					<div class="clear"></div>
-				</div>
-			 </div>
-			<div class="blog_list">
-				<h2>There are many variations of passages popular belief</h2>
-				<h5>march  26th, 2013 , Posted by&nbsp;<a href="index">J. Smith</a></h5>
-				<div class="blog_para">
-					<p class="para"><a  href="details"><img src="__PUBLIC__/images/blog2.jpg" alt=""></a>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem IpsumOn the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment,</p>
-					<div class="read_more">
-						 <a class="btn" href="details">读取全文</a>
-					</div>
-				</div>
-			   <div class="clear"></div>				
-			 </div>
-			<div class="blog_list">
-				<h2>The standard chunk of Lorem Ipsum used since</h2>
-				<h5>Auguest 3rd, 2013 , Posted by&nbsp;<a href="index">H. Rackham</a></h5>
-				<div class="blog_para">
-					<p class="para"><a  href="details"><img src="__PUBLIC__/images/blog3.jpg" alt=""></a>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem IpsumOn the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment,</p>
-					<div class="read_more">
-						 <a class="btn" href="details">读取全文</a>
-					</div>
-				</div>
-			   <div class="clear"></div>				
-			 </div>		 
-			</div>
-		</div>
-</div>
-
+<block name='main'></block>
 <div class="wrap">
 		<!--<ul id="flexiselDemo3">
 			<li><img src="__PUBLIC__/images/client1.jpg" /></li>
@@ -230,18 +182,18 @@ $(window).load(function() {
 			<div class="span1_of_4">
 				<h4>热门文章</h4>
 				<?php foreach ($hots as $key=>$value) { ?>
-				<h3><a href="details" style="color:white"><?php echo ($value['title']); ?></a></h3>
+				<h3><a href="details" style="color:white">{$value['title']}</a></h3>
 				<ul class="f_nav1">
-					<li class="timer"><a href="#"><?php echo ($value['create_at']); ?></a></li>
+					<li class="timer"><a href="#">{$value['create_at']}</a></li>
 				</ul><br>
 				<?php } ?>
 			</div>
 			<div class="span1_of_4">
 				<h4>特色文章</h4>
 				<?php foreach ($tags as $key=>$value) { ?>
-				<h3><a href="details" style="color:white"><?php echo ($value['title']); ?></a></h3>
+				<h3><a href="details" style="color:white">{$value['title']}</a></h3>
 				<ul class="f_nav1">
-					<li class="timer"><a href="#"><?php echo ($value['create_at']); ?></a></li>
+					<li class="timer"><a href="#">{$value['create_at']}</a></li>
 				</ul><br>
 				<?php } ?>
 			</div>

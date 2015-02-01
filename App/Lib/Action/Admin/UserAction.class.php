@@ -10,6 +10,8 @@ Class UserAction extends Action {
 		$this->display();
 	}
 	public function index(){
+		$db=M('users');
+		$this->users=$db->select();
 		$this->display();
 	}
 	public function sechUser(){

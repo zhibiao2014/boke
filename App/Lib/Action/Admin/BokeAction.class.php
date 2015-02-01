@@ -4,6 +4,8 @@ Class BokeAction extends Action {
 		$this->display();
 	}
 	public function index(){
+		$db=M('boke');
+		$this->datas=$db->select();
 		$this->display();
 	}
 	public function sechBoke(){

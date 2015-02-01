@@ -15,31 +15,28 @@
 		<tr>
 			<th>ID</th>
 			<th>发布者</th>
-			<th>博客内容</th>
-			<th>配图</th>
-			<th>统计信息</th>
+			<th>博客标题</th>
+
+			<!--<th>统计信息</th>-->
 			<th>发布时间</th>
-			<th>操作</th>
+
 		</tr>
-		<?php if(is_array($weibo)): foreach($weibo as $key=>$v): ?><tr>
-				<td><?php echo ($v["id"]); ?></td>
-				<td><?php echo ($v["username"]); ?></td>
-				<td><?php echo ($v["content"]); ?></td>
-				<td>
-					<?php if($v["pic"]): ?><a href="__ROOT__/Uploads/Pic/<?php echo ($v["pic"]); ?>" target='_blank'>查看图片</a><?php endif; ?>
-				</td>
+		<?php foreach ($datas as $key=>$value){ ?>
+			<tr>
+				<td><?php echo ($value['id']); ?></td>
+				<td><?php echo ($value['username']); ?></td>
+				<td><?php echo ($value['title']); ?></td>
+				<!--
 				<td>
 					<ul>
-						<li>转发：<?php echo ($v["turn"]); ?></li>
-						<li>收藏：<?php echo ($v["keep"]); ?></li>
-						<li>评论：<?php echo ($v["comment"]); ?></li>
+						<li>转发：<?php echo ($valueturn); ?></li>
+						<li>收藏：<?php echo ($valuekeep); ?></li>
+						<li>评论：<?php echo ($valuecomment); ?></li>
 					</ul>
-				</td>
-				<td><?php echo (date('y-m-d H:i', $v["time"])); ?></td>
-				<td>
-					<a href="<?php echo U('delWeibo', array('id' => $v['id'], 'uid' => $v['uid']));?>" class='del'></a>
-				</td>
-			</tr><?php endforeach; endif; ?>
+				</td>-->
+				<td><?php echo ($value['create_at']); ?></td>
+			</tr>
+		<?php } ?>
 		<tr>
 			<td colspan='7' align='center' height='60'><?php echo ($page); ?></td>
 		</tr>

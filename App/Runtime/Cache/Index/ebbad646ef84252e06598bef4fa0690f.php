@@ -33,6 +33,7 @@
 			});
 		});
 	</script>
+
 </head>
 <body>
 <!-- start header -->
@@ -59,14 +60,12 @@
 <div class="wrap">
 	<div class="header_sub">
 		<div class="h_menu">
+		
 			<ul>
 				<li class="active"><a href="index">主页</a></li>
-				<li><a href="about">关于我们</a></li>
-				<li><a href="service">服务</a></li>
-				<li><a href="details">页面</a></li>
 				<li><a href="blog">博客</a></li>
-				<li><a href="contact">联系我们</a></li>
 			</ul>
+		
 		</div>
 		<div class="h_search">
     		<form>
@@ -76,12 +75,8 @@
 		</div>
         <div class="menu">
         	<ul>
-				<li class="active"><a href="index">主页</a></li>
-				<li><a href="about">关于我们</a></li>
-				<li><a href="service">服务</a></li>
-				<li><a href="details">页面</a></li>
+				<li class=""><a href="index">主页</a></li>
 				<li><a href="blog">博客</a></li>
-				<li><a href="contact">联系我们</a></li>
             </ul>
         </div>
         <div class="search">
@@ -119,6 +114,7 @@
 </div>
 </div>
 </div>
+
 <!-- start slider -->
 <div class="slider_bg">
 <div class="wrap">
@@ -148,7 +144,7 @@
 			<p class="para">"一枝从污泥里长出的夏荷，竟开出雪一样洁白纯净的花儿；<br />  一粒细细黑黑的萤火虫，竟能在茫茫黑夜里发出星星般闪亮的光。<br />  一株微不足道的小草，竟开出像海洋一样湛蓝的花；<br />  一只毫不起眼的鸟儿，竟能在枝头唱出远胜小提琴的夜曲；<br />  一条柔软无骨的蚯蚓，居然能在坚实的土地里如鱼在海中似的自由遨游。"</p>
 		</div>
 		<!-- start grids_of_3 -->
-		<div class="grids_of_3">
+		<!--<div class="grids_of_3">
 			<div class="grid1_of_3">
 				<img src="__PUBLIC__/images/icon1.png" alt=""/>
 				<h3><a href="#">视频 </a></h3>
@@ -165,7 +161,7 @@
 				<p>50万张高清图片素材和桌面壁纸免费下载,全部高清无水印!内容涵盖风景图片、动物图片、鲜花图片、家居图片、设计素材、电脑壁纸、动漫壁纸、电影壁纸、明星壁纸、美女...</p>
 			</div>
 			<div class="clear"></div>
-		</div>
+		</div>-->
 		<!-- end grids_of_3 -->
 	</div>
 </div>
@@ -189,8 +185,9 @@
 	</div>
 </div>
 </div>
+
 <div class="wrap">
-		<ul id="flexiselDemo3">
+		<!--<ul id="flexiselDemo3">
 			<li><img src="__PUBLIC__/images/client1.jpg" /></li>
 			<li><img src="__PUBLIC__/images/client6.jpg" /></li>
 			<li><img src="__PUBLIC__/images/client2.jpg" /></li>
@@ -198,7 +195,7 @@
 			<li><img src="__PUBLIC__/images/client4.jpg" /></li>
 			<li><img src="__PUBLIC__/images/client3.jpg" /></li>
 			<li><img src="__PUBLIC__/images/client4.jpg" /></li>
-		</ul>
+		</ul>-->
 	<script type="text/javascript">
 $(window).load(function() {
 	$("#flexiselDemo1").flexisel();
