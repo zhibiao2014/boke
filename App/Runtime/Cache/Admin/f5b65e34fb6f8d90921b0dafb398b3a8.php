@@ -32,7 +32,15 @@ $arrType=array('image/jpg','image/gif','image/png','image/bmp','image/pjpeg'); $
 				<td align='right'>上传图片</td>
 				<td>
 					<input name='upfile' type='file'/>
-					<input name="btn" type="submit" value="上传" /><br />
+				</td>
+			</tr>
+			<tr>
+				<td>审核：</td>
+				<td>
+				<select>
+					<option value='1'>通过</option>
+					<option value='0'>不通过</option>
+				</select>
 				</td>
 			</tr>
 			<tr>
@@ -40,6 +48,7 @@ $arrType=array('image/jpg','image/gif','image/png','image/bmp','image/pjpeg'); $
 					<input type="submit" value='发布' class='big-btn'/>
 				</td>
 			</tr>
+			
 		</table>
 	</form>
 </body>
