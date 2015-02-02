@@ -10,7 +10,8 @@ Class UserAction extends Action {
 		$data = array(
 			'name' =>  $this->_post('username'),
 			'password' => $this->_post('pwd','md5'),
-			'logintime' => time(),
+			'logintime' => date('Y-m-d H:i', time()),
+			'create_at' => date('Y-m-d H:i', time()),
 			'loginip' => get_client_ip(),
 			'admin' => $this->_post('admin'),
 			);

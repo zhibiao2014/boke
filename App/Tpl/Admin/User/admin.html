@@ -35,7 +35,9 @@
 				<td align='center'>{$value['logintime']}</td>
 				<td align='center'>{$value['loginip']}</td>
 				<td width='60' align='center'>
-					<if condition='$value["lock"]'>锁定</if>
+					<if condition='$value["lock"]'>锁定
+					<else/>未锁
+					</if>
 				</td>
 				<td width='240'>
 					<if condition='$value["lock"]'>

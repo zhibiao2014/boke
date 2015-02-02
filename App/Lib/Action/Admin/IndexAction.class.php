@@ -20,6 +20,10 @@ Class IndexAction extends CommonAction
 
 
 	public function loginOut(){
+		$id=$_SESSION['uid'];
+		$db=M('users');
+		$db->logintime=$_SESSION['now'];
+		$db->where(array('user_id' =>$id))->save();
 		session_unset();
 		session_destroy();
 		redirect(U('Login/index'));

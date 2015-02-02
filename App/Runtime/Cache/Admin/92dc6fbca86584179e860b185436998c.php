@@ -33,7 +33,8 @@
 				<td align='center'><?php echo ($value['logintime']); ?></td>
 				<td align='center'><?php echo ($value['loginip']); ?></td>
 				<td width='60' align='center'>
-					<?php if($value["lock"]): ?>锁定<?php endif; ?>
+					<?php if($value["lock"]): ?>锁定
+					<?php else: ?>未锁<?php endif; ?>
 				</td>
 				<td width='240'>
 					<?php if($value["lock"]): ?><a href="<?php echo U('lockAdmin', array('id' => $value['user_id'], 'lock' => 0));?>" class='add lock'>解除锁定</a>
