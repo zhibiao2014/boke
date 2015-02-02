@@ -1,7 +1,7 @@
-<!DOCTYPE HTML>
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE HTML>
 <html>
 <head>
-<block name='title'><title>Home</title></block>
+<title>我的博客</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <link href='__PUBLIC__/css/google.css' rel='stylesheet' type='text/css'>
@@ -33,7 +33,7 @@
 			});
 		});
 	</script>
-<block name='subheader'></block>
+
 </head>
 <body>
 <!-- start header -->
@@ -60,12 +60,12 @@
 <div class="wrap">
 	<div class="header_sub">
 		<div class="h_menu">
-		<block name='high'>
-			<ul>
-				<li class="active"><a href="{:U('Index/Index/index')}">主页</a></li>
-				<li><a href="{:U('Index/Index/blog')}">博客</a></li>
-			</ul>
-		</block>
+		
+	<ul>
+		<li><a href="<?php echo U('Index/Index/index');?>">主页</a></li>
+		<li><a href="<?php echo U('Index/Index/blog');?>">博客</a></li>
+	</ul>
+
 		</div>
 		<div class="h_search">
     		<form>
@@ -75,8 +75,8 @@
 		</div>
         <div class="menu">
         	<ul>
-				<li class=""><a href="{:U('Index/Index/index')}">主页</a></li>
-				<li><a href="{:U('Index/Index/blog')}">博客</a></li>
+				<li class=""><a href="<?php echo U('Index/Index/index');?>">主页</a></li>
+				<li><a href="<?php echo U('Index/Index/blog');?>">博客</a></li>
             </ul>
         </div>
         <div class="search">
@@ -114,7 +114,7 @@
 </div>
 </div>
 </div>
-<block name='slider'>
+
 	<div class="top_bg">
 		<div class="wrap">
 			<div class="top">
@@ -122,8 +122,27 @@
 			</div>
 		</div>
 	</div>
-</block>
-<block name='main'></block>
+
+
+<!-- start main -->
+<div class="wrap">`
+	<div class="main">
+		<div class="details">
+			<h2><?php echo ($detail['title']); ?></h2>
+			<div class="det_pic">
+				  <img src="__PUBLIC__/images/det_pic.jpg" alt="" />
+			</div>
+			<div class="det_text">
+				<p class="para">&nbsp&nbsp<?php echo ($detail['content']); ?></p>
+				<div class="read_more">
+					 <a class="btn" href="details">评论</a>
+				</div>
+			</div>
+			<div class="clear"></div>
+		</div>
+	</div>
+</div>
+
 <div class="wrap">
 		<!--<ul id="flexiselDemo3">
 			<li><img src="__PUBLIC__/images/client1.jpg" /></li>
@@ -191,18 +210,18 @@ $(window).load(function() {
 			<div class="span1_of_4">
 				<h4>热门文章</h4>
 				<?php foreach ($hots as $key=>$value) { ?>
-				<h3><a href="details" style="color:white">{$value['title']}</a></h3>
+				<h3><a href="details" style="color:white"><?php echo ($value['title']); ?></a></h3>
 				<ul class="f_nav1">
-					<li class="timer"><a href="#">{$value['create_at']}</a></li>
+					<li class="timer"><a href="#"><?php echo ($value['create_at']); ?></a></li>
 				</ul><br>
 				<?php } ?>
 			</div>
 			<div class="span1_of_4">
 				<h4>特色文章</h4>
 				<?php foreach ($tags as $key=>$value) { ?>
-				<h3><a href="details" style="color:white">{$value['title']}</a></h3>
+				<h3><a href="details" style="color:white"><?php echo ($value['title']); ?></a></h3>
 				<ul class="f_nav1">
-					<li class="timer"><a href="#">{$value['create_at']}</a></li>
+					<li class="timer"><a href="#"><?php echo ($value['create_at']); ?></a></li>
 				</ul><br>
 				<?php } ?>
 			</div>

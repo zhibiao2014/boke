@@ -1,7 +1,9 @@
-<!DOCTYPE HTML>
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE HTML>
 <html>
 <head>
-<block name='title'><title>Home</title></block>
+<title>我的博客</title>
+<?php  function getstr($string, $length, $encoding = 'utf-8') { $string = trim($string); if($length && strlen($string) > $length) { $wordscut = ''; if(strtolower($encoding) == 'utf-8') { $n = 0; $tn = 0; $noc = 0; while ($n < strlen($string)) { $t = ord($string[$n]); if($t == 9 || $t == 10 || (32 <= $t && $t <= 126)) { $tn = 1; $n++; $noc++; } elseif(194 <= $t && $t <= 223) { $tn = 2; $n += 2; $noc += 2; } elseif(224 <= $t && $t < 239) { $tn = 3; $n += 3; $noc += 2; } elseif(240 <= $t && $t <= 247) { $tn = 4; $n += 4; $noc += 2; } elseif(248 <= $t && $t <= 251) { $tn = 5; $n += 5; $noc += 2; } elseif($t == 252 || $t == 253) { $tn = 6; $n += 6; $noc += 2; } else { $n++; } if ($noc >= $length) { break; } } if ($noc > $length) { $n -= $tn; } $wordscut = substr($string, 0, $n); } else { for($i = 0; $i < $length - 1; $i++) { if(ord($string[$i]) > 127) { $wordscut .= $string[$i].$string[$i + 1]; $i++; } else { $wordscut .= $string[$i]; } } } $string = $wordscut; } return trim($string); } ?>
+
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <link href='__PUBLIC__/css/google.css' rel='stylesheet' type='text/css'>
@@ -33,7 +35,7 @@
 			});
 		});
 	</script>
-<block name='subheader'></block>
+
 </head>
 <body>
 <!-- start header -->
@@ -60,12 +62,12 @@
 <div class="wrap">
 	<div class="header_sub">
 		<div class="h_menu">
-		<block name='high'>
-			<ul>
-				<li class="active"><a href="{:U('Index/Index/index')}">主页</a></li>
-				<li><a href="{:U('Index/Index/blog')}">博客</a></li>
-			</ul>
-		</block>
+		
+	<ul>
+		<li><a href="<?php echo U('Index/Index/index');?>">主页</a></li>
+		<li class="active"><a href="<?php echo U('Index/Index/blog');?>">博客</a></li>
+	</ul>
+
 		</div>
 		<div class="h_search">
     		<form>
@@ -75,8 +77,8 @@
 		</div>
         <div class="menu">
         	<ul>
-				<li class=""><a href="{:U('Index/Index/index')}">主页</a></li>
-				<li><a href="{:U('Index/Index/blog')}">博客</a></li>
+				<li class=""><a href="<?php echo U('Index/Index/index');?>">主页</a></li>
+				<li><a href="<?php echo U('Index/Index/blog');?>">博客</a></li>
             </ul>
         </div>
         <div class="search">
@@ -114,7 +116,7 @@
 </div>
 </div>
 </div>
-<block name='slider'>
+
 	<div class="top_bg">
 		<div class="wrap">
 			<div class="top">
@@ -122,8 +124,28 @@
 			</div>
 		</div>
 	</div>
-</block>
-<block name='main'></block>
+
+
+	<div class="wrap">
+		<div class="main">
+			<div class="blog">
+				<?php foreach ($data as $value) { ?>
+				<div class="blog_list">
+				<a  href="details"><h2><?php echo ($value['title']); ?></h2></a>
+					<h5><?php echo ($value['create_at']); ?> , Posted by&nbsp;<a href="index">ZhiBiao</a></h5>
+					<div class="blog_para">
+						<p class="para"><a  href="details/id/<?php echo ($value['id']); ?>"><img src="__PUBLIC__/images/blog1.jpg" alt=""></a><?php echo getstr($value['content'],600) ?>......</p>
+						<div class="read_more">
+							<a class="btn" href="details/id/<?php echo ($value['id']); ?>">读取全文</a>
+						</div>
+						<div class="clear"></div>
+					</div>
+				</div>
+				<?php } ?>	 
+			</div>
+		</div>
+	</div>
+
 <div class="wrap">
 		<!--<ul id="flexiselDemo3">
 			<li><img src="__PUBLIC__/images/client1.jpg" /></li>
@@ -191,18 +213,18 @@ $(window).load(function() {
 			<div class="span1_of_4">
 				<h4>热门文章</h4>
 				<?php foreach ($hots as $key=>$value) { ?>
-				<h3><a href="details" style="color:white">{$value['title']}</a></h3>
+				<h3><a href="details" style="color:white"><?php echo ($value['title']); ?></a></h3>
 				<ul class="f_nav1">
-					<li class="timer"><a href="#">{$value['create_at']}</a></li>
+					<li class="timer"><a href="#"><?php echo ($value['create_at']); ?></a></li>
 				</ul><br>
 				<?php } ?>
 			</div>
 			<div class="span1_of_4">
 				<h4>特色文章</h4>
 				<?php foreach ($tags as $key=>$value) { ?>
-				<h3><a href="details" style="color:white">{$value['title']}</a></h3>
+				<h3><a href="details" style="color:white"><?php echo ($value['title']); ?></a></h3>
 				<ul class="f_nav1">
-					<li class="timer"><a href="#">{$value['create_at']}</a></li>
+					<li class="timer"><a href="#"><?php echo ($value['create_at']); ?></a></li>
 				</ul><br>
 				<?php } ?>
 			</div>

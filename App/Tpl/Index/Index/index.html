@@ -7,7 +7,7 @@
 				<div id="da-slider" class="da-slider">
 				<?php foreach ($bokes as $key => $value ) { ?>
 				<div class="da-slide">
-					<h2><a href="#" style="color:white">{$value['title']}</a></h2>
+					<h2><a href="{:U('Index/Index/details', array('id' => $value['id']))}" style="color:white">{$value['title']}</a></h2>
 					<p>&nbsp&nbsp{$value['content']}.</p>
 				</div>
 				<?php } ?>
@@ -59,9 +59,9 @@
 		<div class="span_of_3">
 			<?php foreach ($bokes as $key=>$value){ ?>
 			<div class="span1_of_3">
-				<a href="details"><img src="__PUBLIC__/images/pic1.jpg" alt=""/></a>
+				<a href="{:U('Index/Index/details', array('id' => $value['id']))}"><img src="__PUBLIC__/images/pic1.jpg" alt=""/></a>
 				<div class="span1_of_3_text">
-					<h3><a href="details">{$value['title']}</a></h3>
+					<h3><a href="{:U('Index/Index/details', array('id' => $value['id']))}">{$value['title']}</a></h3>
 				</div>
 			</div>
 			<?php } ?>

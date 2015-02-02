@@ -1,7 +1,7 @@
-<!DOCTYPE HTML>
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE HTML>
 <html>
 <head>
-<block name='title'><title>Home</title></block>
+<title>Home</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <link href='__PUBLIC__/css/google.css' rel='stylesheet' type='text/css'>
@@ -33,7 +33,7 @@
 			});
 		});
 	</script>
-<block name='subheader'></block>
+
 </head>
 <body>
 <!-- start header -->
@@ -60,12 +60,12 @@
 <div class="wrap">
 	<div class="header_sub">
 		<div class="h_menu">
-		<block name='high'>
+		
 			<ul>
-				<li class="active"><a href="{:U('Index/Index/index')}">主页</a></li>
-				<li><a href="{:U('Index/Index/blog')}">博客</a></li>
+				<li class="active"><a href="<?php echo U('Index/Index/index');?>">主页</a></li>
+				<li><a href="<?php echo U('Index/Index/blog');?>">博客</a></li>
 			</ul>
-		</block>
+		
 		</div>
 		<div class="h_search">
     		<form>
@@ -75,8 +75,8 @@
 		</div>
         <div class="menu">
         	<ul>
-				<li class=""><a href="{:U('Index/Index/index')}">主页</a></li>
-				<li><a href="{:U('Index/Index/blog')}">博客</a></li>
+				<li class=""><a href="<?php echo U('Index/Index/index');?>">主页</a></li>
+				<li><a href="<?php echo U('Index/Index/blog');?>">博客</a></li>
             </ul>
         </div>
         <div class="search">
@@ -114,16 +114,79 @@
 </div>
 </div>
 </div>
-<block name='slider'>
-	<div class="top_bg">
-		<div class="wrap">
-			<div class="top">
-				<h2>欢迎来到我的博客</h2>
+
+<div class="slider_bg">
+<div class="wrap">
+	<div class="slider">
+				<!---start-da-slider-->
+				<div id="da-slider" class="da-slider">
+				<?php foreach ($bokes as $key => $value ) { ?>
+				<div class="da-slide">
+					<h2><a href="<?php echo U('Index/Index/details', array('id' => $value['id']));?>" style="color:white"><?php echo ($value['title']); ?></a></h2>
+					<p>&nbsp&nbsp<?php echo ($value['content']); ?>.</p>
+				</div>
+				<?php } ?>
+				<nav class="da-arrows">
+					<span class="da-arrows-prev"></span>
+					<span class="da-arrows-next"></span>
+				</nav>
 			</div>
+ 			<!--//End-da-slider-->
+ 	</div>
+</div>
+</div>
+
+
+<!-- start main -->
+<div class="wrap">
+	<div class="main">
+		<div class="main_text">
+			<h2>生命就是个奇迹！！！</h2>
+			<p class="para">"一枝从污泥里长出的夏荷，竟开出雪一样洁白纯净的花儿；<br />  一粒细细黑黑的萤火虫，竟能在茫茫黑夜里发出星星般闪亮的光。<br />  一株微不足道的小草，竟开出像海洋一样湛蓝的花；<br />  一只毫不起眼的鸟儿，竟能在枝头唱出远胜小提琴的夜曲；<br />  一条柔软无骨的蚯蚓，居然能在坚实的土地里如鱼在海中似的自由遨游。"</p>
 		</div>
+		<!-- start grids_of_3 -->
+		<!--<div class="grids_of_3">
+			<div class="grid1_of_3">
+				<img src="__PUBLIC__/images/icon1.png" alt=""/>
+				<h3><a href="#">视频 </a></h3>
+				<p>百度视频搜索是全球最大的中文视频搜索引擎,拥有最多的中文视频资源,提供用户最完美的观看体验。.</p>
+			</div>
+			<div class="grid1_of_3">
+				<img src="__PUBLIC__/images/icon2.png" alt=""/>
+				<h3><a href="#">文章 </span> </a></h3>
+				<p>爱情、亲情、友情等情感文章欣赏及人生感悟、经典、哲理、励志、搞笑文章,校园文章、美文故事、散文随笔等免费在线阅读。欢迎作者在本站发表文章,分享心情。.</p>
+			</div>
+			<div class="grid1_of_3">
+				<img src="__PUBLIC__/images/icon3.png" alt=""/>
+				<h3><a href="#">图片 </span> </a></h3>
+				<p>50万张高清图片素材和桌面壁纸免费下载,全部高清无水印!内容涵盖风景图片、动物图片、鲜花图片、家居图片、设计素材、电脑壁纸、动漫壁纸、电影壁纸、明星壁纸、美女...</p>
+			</div>
+			<div class="clear"></div>
+		</div>-->
+		<!-- end grids_of_3 -->
 	</div>
-</block>
-<block name='main'></block>
+</div>
+<!-- start main_bg -->
+<div class="main_bg">
+<div class="wrap">
+	<div class="main content_top">
+		<!-- start span_of_3 -->
+		<div class="span_of_3">
+			<?php foreach ($bokes as $key=>$value){ ?>
+			<div class="span1_of_3">
+				<a href="<?php echo U('Index/Index/details', array('id' => $value['id']));?>"><img src="__PUBLIC__/images/pic1.jpg" alt=""/></a>
+				<div class="span1_of_3_text">
+					<h3><a href="<?php echo U('Index/Index/details', array('id' => $value['id']));?>"><?php echo ($value['title']); ?></a></h3>
+				</div>
+			</div>
+			<?php } ?>
+			<div class="clear"></div>
+		</div>
+		<!-- end grids_of_3 -->
+	</div>
+</div>
+</div>
+
 <div class="wrap">
 		<!--<ul id="flexiselDemo3">
 			<li><img src="__PUBLIC__/images/client1.jpg" /></li>
@@ -191,18 +254,18 @@ $(window).load(function() {
 			<div class="span1_of_4">
 				<h4>热门文章</h4>
 				<?php foreach ($hots as $key=>$value) { ?>
-				<h3><a href="details" style="color:white">{$value['title']}</a></h3>
+				<h3><a href="details" style="color:white"><?php echo ($value['title']); ?></a></h3>
 				<ul class="f_nav1">
-					<li class="timer"><a href="#">{$value['create_at']}</a></li>
+					<li class="timer"><a href="#"><?php echo ($value['create_at']); ?></a></li>
 				</ul><br>
 				<?php } ?>
 			</div>
 			<div class="span1_of_4">
 				<h4>特色文章</h4>
 				<?php foreach ($tags as $key=>$value) { ?>
-				<h3><a href="details" style="color:white">{$value['title']}</a></h3>
+				<h3><a href="details" style="color:white"><?php echo ($value['title']); ?></a></h3>
 				<ul class="f_nav1">
-					<li class="timer"><a href="#">{$value['create_at']}</a></li>
+					<li class="timer"><a href="#"><?php echo ($value['create_at']); ?></a></li>
 				</ul><br>
 				<?php } ?>
 			</div>

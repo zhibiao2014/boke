@@ -16,7 +16,9 @@
 		<dl>
 			<dt>个人信息</dt>
 			<dd>上一次登录时间：<span>{$Think.session.logintime}</span></dd>
+			<dd>上一次登录IP：<span>{$Think.session.loginip}</span></dd>
 			<dd>本次登录时间：<span>{$Think.session.now}</span></dd>
+			<dd>本次登录IP：<span>{:get_client_ip()}</span></dd>
 		</dl>
 		<dl>
 			<dt>服务器信息</dt>

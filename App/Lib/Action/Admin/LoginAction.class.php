@@ -24,7 +24,7 @@ Class LoginAction extends Action
 		$password = $this->_post('pwd', 'md5');
 		$db = M('users');
 		$user = $db->where(array('name' => $name))->find();
-		if (!$user || $user['password'] != $pwd) {
+		if (!$user || $user['password'] != $password) {
 			$this->error('账号或密码错误');
 		}
 
@@ -40,7 +40,7 @@ Class LoginAction extends Action
 		$db->save($data);
 		session('uid', $user['user_id']);
 		session('username', $user['name']);
-		session('logintime', date('Y-m-d H:i', $user['logintime']));
+		session('logintime', $user['logintime']);
 		session('now', date('Y-m-d H:i', time()));
 		session('loginip', $user['loginip']);
 		session('admin', $user['admin']);

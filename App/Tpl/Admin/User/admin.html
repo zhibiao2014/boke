@@ -18,41 +18,35 @@
 			<th>级别</th>
 			<th>最后登录时间</th>
 			<th>最后登录IP</th>
-			<th>账号状态</th>
-			<if condition='!$_SESSION["admin"]'>
-				<th>操作</th>
-			</if>
+			<th>账号状态</th>		
+  			<th>操作</th>
 		</tr>
-		<foreach name='admin' item='v'>
+		<?php foreach ($users as $value) { ?>
 			<tr>
-				<td width='50' align='center'>{$v.id}</td>
-				<td width='120' align='center'>{$v.username}</td>
+				<td width='50' align='center'>{$value['user_id']}</td>
+				<td width='120' align='center'>{$value['name']}</td>
 				<td align='center'>
-					<if condition='$v["admin"]'>
+					<if condition='$value["admin"]==1'>
 						管理员
 					<else/>
 						超级管理员
 					</if>
 				</td>
-				<td align='center'>{$v.logintime|date='y-m-d H:i', ###}</td>
-				<td align='center'>{$v.loginip}</td>
+				<td align='center'>{$value['logintime']}</td>
+				<td align='center'>{$value['loginip']}</td>
 				<td width='60' align='center'>
-					<if condition='$v["lock"]'>锁定</if>
+					<if condition='$value["lock"]'>锁定</if>
 				</td>
-				<if condition='!$_SESSION["admin"]'>
-					<td width='240'>
-						<if condition='$v["admin"]'>
-							<if condition='$v["lock"]'>
-								<a href="{:U('lockAdmin', array('id' => $v['id'], 'lock' => 0))}" class='add lock'>解除锁定</a>
-							<else/>
-								<a href="{:U('lockAdmin', array('id' => $v['id'], 'lock' => 1))}" class='add lock'>锁定用户</a>
-							</if>
-							<a href='{:U("delAdmin", array("id" => $v["id"]))}' class='add lock'>删除管理员</a>
-						</if>
-					</td>
-				</if>
+				<td width='240'>
+					<if condition='$value["lock"]'>
+						<a href="{:U('lockAdmin', array('id' => $value['user_id'], 'lock' => 0))}" class='add lock'>解除锁定</a>
+					<else/>
+						<a href="{:U('lockAdmin', array('id' => $value['user_id'], 'lock' => 1))}" class='add lock'>锁定用户</a>
+					</if>
+					<a href='{:U("delAdmin", array("id" => $value["user_id"]))}' class='add lock'>删除管理员</a>
+				</td>
 			</tr>
-		</foreach>
+		<?php } ?>
 	</table>
 </body>
 </html>

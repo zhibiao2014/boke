@@ -1,49 +1,94 @@
 <extend name="Layout:public" />
-<block name='title'><title>我的博客</title></block>
+<block name='title'><title>我的博客</title>
+<?php 
+function getstr($string, $length, $encoding  = 'utf-8') {
+    $string = trim($string);
+ 
+    if($length && strlen($string) > $length) {
+        //截断字符
+        $wordscut = '';
+        if(strtolower($encoding) == 'utf-8') {
+            //utf8编码
+            $n = 0;
+            $tn = 0;
+            $noc = 0;
+            while ($n < strlen($string)) {
+                $t = ord($string[$n]);
+                if($t == 9 || $t == 10 || (32 <= $t && $t <= 126)) {
+                    $tn = 1;
+                    $n++;
+                    $noc++;
+                } elseif(194 <= $t && $t <= 223) {
+                    $tn = 2;
+                    $n += 2;
+                    $noc += 2;
+                } elseif(224 <= $t && $t < 239) {
+                    $tn = 3;
+                    $n += 3;
+                    $noc += 2;
+                } elseif(240 <= $t && $t <= 247) {
+                    $tn = 4;
+                    $n += 4;
+                    $noc += 2;
+                } elseif(248 <= $t && $t <= 251) {
+                    $tn = 5;
+                    $n += 5;
+                    $noc += 2;
+                } elseif($t == 252 || $t == 253) {
+                    $tn = 6;
+                    $n += 6;
+                    $noc += 2;
+                } else {
+                    $n++;
+                }
+                if ($noc >= $length) {
+                    break;
+                }
+            }
+            if ($noc > $length) {
+                $n -= $tn;
+            }
+            $wordscut = substr($string, 0, $n);
+        } else {
+            for($i = 0; $i < $length - 1; $i++) {
+                if(ord($string[$i]) > 127) {
+                    $wordscut .= $string[$i].$string[$i + 1];
+                    $i++;
+                } else {
+                    $wordscut .= $string[$i];
+                }
+            }
+        }
+        $string = $wordscut;
+    }
+    return trim($string);
+}
+?>
+</block>
 <block name='high'>
 	<ul>
-		<li><a href="index">主页</a></li>
-		<li class="active"><a href="blog">博客</a></li>
+		<li><a href="{:U('Index/Index/index')}">主页</a></li>
+		<li class="active"><a href="{:U('Index/Index/blog')}">博客</a></li>
 	</ul>
 </block>
 <block name='main'>
-<div class="wrap">
-<div class="main">
-		<div class="blog">
-			<div class="blog_list">
-				<h2>Lorem Ipsum is simply dummy text of the printing text</h2>
-				<h5>January 3rd, 2013 , Posted by&nbsp;<a href="index">H. Rackham</a></h5>
-				<div class="blog_para">
-					<p class="para"><a  href="details"><img src="__PUBLIC__/images/blog1.jpg" alt=""></a>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue;</p>
-					<div class="read_more">
-						 <a class="btn" href="details">读取全文</a>
-					</div>
-					<div class="clear"></div>
-				</div>
-			 </div>
-			<div class="blog_list">
-				<h2>There are many variations of passages popular belief</h2>
-				<h5>march  26th, 2013 , Posted by&nbsp;<a href="index">J. Smith</a></h5>
-				<div class="blog_para">
-					<p class="para"><a  href="details"><img src="__PUBLIC__/images/blog2.jpg" alt=""></a>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem IpsumOn the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment,</p>
-					<div class="read_more">
-						 <a class="btn" href="details">读取全文</a>
+	<div class="wrap">
+		<div class="main">
+			<div class="blog">
+				<?php foreach ($data as $value) { ?>
+				<div class="blog_list">
+				<a  href="details"><h2>{$value['title']}</h2></a>
+					<h5>{$value['create_at']} , Posted by&nbsp;<a href="index">ZhiBiao</a></h5>
+					<div class="blog_para">
+						<p class="para"><a  href="details/id/{$value['id']}"><img src="__PUBLIC__/images/blog1.jpg" alt=""></a><?php echo getstr($value['content'],600) ?>......</p>
+						<div class="read_more">
+							<a class="btn" href="details/id/{$value['id']}">读取全文</a>
+						</div>
+						<div class="clear"></div>
 					</div>
 				</div>
-			   <div class="clear"></div>				
-			 </div>
-			<div class="blog_list">
-				<h2>The standard chunk of Lorem Ipsum used since</h2>
-				<h5>Auguest 3rd, 2013 , Posted by&nbsp;<a href="index">H. Rackham</a></h5>
-				<div class="blog_para">
-					<p class="para"><a  href="details"><img src="__PUBLIC__/images/blog3.jpg" alt=""></a>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem IpsumOn the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment,</p>
-					<div class="read_more">
-						 <a class="btn" href="details">读取全文</a>
-					</div>
-				</div>
-			   <div class="clear"></div>				
-			 </div>		 
+				<?php } ?>	 
 			</div>
 		</div>
-</div>
+	</div>
 </block>

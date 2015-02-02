@@ -17,7 +17,7 @@
 				<li class='first first_cur'>
 					<a href="{:U('copy')}"><span>首&nbsp;页</span></a>
 				</li>
-				<li class='next'>
+				<!--<li class='next'>
 					<a href="{:U('User/index')}"><span>用户管理</span></a>
 				</li>
 				<li>
@@ -25,7 +25,7 @@
 				</li>
 				<li class='last'>
 					<a href="{:U('System/index')}"><span>系统设置</span><div></div></a>
-				</li>
+				</li>-->
 			</ul>
 			<div id='user'>
 				<span class='user_state'>当前管理员：[{$_SESSION['username']}]</span>
@@ -41,15 +41,14 @@
 			<li><a href='{:U("User/index")}'>博客用户</a></li>
 			<li><a href='{:U("User/sechUser")}'>博客用户检索</a></li>
 			<li><a href='{:U("User/admin")}'>后台管理员</a></li>
-			<if condition='!$_SESSION["admin"]'>
-				<li><a href='{:U("User/addAdmin")}'>添加管理员</a></li>
-			</if>
+			<li><a href='{:U("User/addAdmin")}'>添加管理员</a></li>
 		</ul>
 
 		<div class='nav'>
 			<div class="nav_u"><span class="pos down">博客管理</span></div>
 		</div>
 		<ul class='option'>
+			<li><a href='{:U("Boke/addBoke")}'>发布博客</a></li>
 			<li><a href='{:U("Boke/index")}'>原作博客</a></li>
 			<li><a href='{:U("Boke/turn")}'>转发博客</a></li>
 			<li><a href='{:U("Boke/sechBoke")}'>博客检索</a></li>

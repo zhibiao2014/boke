@@ -8,12 +8,16 @@ Class IndexAction extends Action {
 		$this->display();
 	}
 	public function blog(){
+		$db=M('boke');
+		$this->data=$db->order('create_at desc')->select();
 		$this->display();
 	}
 	public function contact(){
 		$this->display();
 	}
 	public function details(){
+		$id=$this->_get('id');
+		$this->detail=M('boke')->find($id);
 		$this->display();
 	}
 	public function service(){
