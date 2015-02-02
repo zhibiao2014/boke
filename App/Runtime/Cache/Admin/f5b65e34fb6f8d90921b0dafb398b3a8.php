@@ -14,18 +14,18 @@ $arrType=array('image/jpg','image/gif','image/png','image/bmp','image/pjpeg'); $
 	<div class='status'>
 		<span>发布博客</span>
 	</div>
-	<form action="<?php echo U('runAddBoke');?>" method='post' enctype="multipart/form-data">
+	<form action="<?php echo U('runEditBoke');?>" method='post' enctype="multipart/form-data">
 		<table width="50%">
 			<tr>
 				<td width='25%' align='right'>标题：</td>
 				<td>
-					<input type="text" name='title' style='font-size:30px' />
+					<input type="text" name='title' style='font-size:30px' value='<?php echo ($data["title"]); ?>' />
 				</td>
 			</tr>
 			<tr>
 				<td align='right'>内容：</td>
 				<td>
-					<textarea id="editor_id" name="content" style="width:500px;height:300px;"></textarea>
+					<textarea id="editor_id" name="content" style="width:500px;height:300px;"><?php echo ($data["content"]); ?></textarea>
 				</td>
 			</tr>
 			<tr>

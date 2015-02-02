@@ -56,18 +56,18 @@ $file=$_FILES['upfile'];
 	<div class='status'>
 		<span>发布博客</span>
 	</div>
-	<form action="{:U('runAddBoke')}" method='post' enctype="multipart/form-data">
+	<form action="{:U('runEditBoke')}" method='post' enctype="multipart/form-data">
 		<table width="50%">
 			<tr>
 				<td width='25%' align='right'>标题：</td>
 				<td>
-					<input type="text" name='title' style='font-size:30px' />
+					<input type="text" name='title' style='font-size:30px' value='{$data["title"]}' />
 				</td>
 			</tr>
 			<tr>
 				<td align='right'>内容：</td>
 				<td>
-					<textarea id="editor_id" name="content" style="width:500px;height:300px;"></textarea>
+					<textarea id="editor_id" name="content" style="width:500px;height:300px;">{$data["content"]}</textarea>
 				</td>
 			</tr>
 			<tr>
@@ -81,6 +81,9 @@ $file=$_FILES['upfile'];
 				<td colspan='2'>
 					<input type="submit" value='发布' class='big-btn'/>
 				</td>
+			</tr>
+			<tr>
+				<td></td>
 			</tr>
 		</table>
 	</form>

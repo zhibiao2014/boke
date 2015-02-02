@@ -282,7 +282,7 @@ $(window).load(function() {
 				<h4>保持联系</h4>
 				<p class="btm"></p>
 				<p class="btm1 pin">湖南常德</p>
-				<p class="btm1 mail"><a href="mailto:276595510@qq.com">给我发邮件</a></p>
+				<p class="btm1 mail">276595510@qq.com</p>
 				<p class="call">18711665602</p>
 			</div>
 			<div class="clear"></div>

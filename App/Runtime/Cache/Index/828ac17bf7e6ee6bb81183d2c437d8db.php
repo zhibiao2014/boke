@@ -131,12 +131,12 @@
 			<div class="blog">
 				<?php foreach ($data as $value) { ?>
 				<div class="blog_list">
-				<a  href="details"><h2><?php echo ($value['title']); ?></h2></a>
-					<h5><?php echo ($value['create_at']); ?> , Posted by&nbsp;<a href="index">ZhiBiao</a></h5>
+				<a  href="details/id/<?php echo ($value['id']); ?>"><h2><?php echo ($value['title']); ?></h2></a>
+					<h5><?php echo ($value['create_at']); ?> , Posted by&nbsp;<a href="index"><?php echo ($value['uname']); ?></a></h5>
 					<div class="blog_para">
 						<p class="para"><a  href="details/id/<?php echo ($value['id']); ?>"><img src="__PUBLIC__/images/blog1.jpg" alt=""></a><?php echo getstr($value['content'],600) ?>......</p>
 						<div class="read_more">
-							<a class="btn" href="details/id/<?php echo ($value['id']); ?>">读取全文</a>
+							<a class="btn" href="details/id/<?php echo ($value['id']); ?>">查看全文</a>
 						</div>
 						<div class="clear"></div>
 					</div>
