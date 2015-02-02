@@ -2,7 +2,7 @@
 Class IndexAction extends Action {
 	public function index(){
 		$db=M('boke');
-		$this->bokes=$db->select();
+		$this->lists=$db->order('create_at desc')->limit('5')->select();
 		$this->tags=$db->where( array( 'type'=>2 ) )->select();
 		$this->hots=$db->where( array( 'type'=>1 ) )->select();
 		$this->display();

@@ -120,7 +120,7 @@
 	<div class="slider">
 				<!---start-da-slider-->
 				<div id="da-slider" class="da-slider">
-				<?php foreach ($bokes as $key => $value ) { ?>
+				<?php foreach ($lists as $key => $value ) { ?>
 				<div class="da-slide">
 					<h2><a href="<?php echo U('Index/Index/details', array('id' => $value['id']));?>" style="color:white"><?php echo ($value['title']); ?></a></h2>
 					<p>&nbsp&nbsp<?php echo ($value['content']); ?>.</p>
@@ -172,7 +172,7 @@
 	<div class="main content_top">
 		<!-- start span_of_3 -->
 		<div class="span_of_3">
-			<?php foreach ($bokes as $key=>$value){ ?>
+			<?php foreach ($lists as $key=>$value){ ?>
 			<div class="span1_of_3">
 				<a href="<?php echo U('Index/Index/details', array('id' => $value['id']));?>"><img src="__PUBLIC__/images/pic1.jpg" alt=""/></a>
 				<div class="span1_of_3_text">
