@@ -17,15 +17,15 @@ $arrType=array('image/jpg','image/gif','image/png','image/bmp','image/pjpeg'); $
 	<form action="<?php echo U('runEditBoke');?>" method='post' enctype="multipart/form-data">
 		<table width="50%">
 			<tr>
-				<td width='25%' align='right'>标题：</td>
+				<td width='25%' align='right'>标题</td>
 				<td>
 					<input type="text" name='title' style='font-size:30px' value='<?php echo ($data["title"]); ?>' />
 				</td>
 			</tr>
 			<tr>
-				<td align='right'>内容：</td>
+				<td align='right'>内容</td>
 				<td>
-					<textarea id="editor_id" name="content" style="width:500px;height:300px;"><?php echo ($data["content"]); ?></textarea>
+					<textarea name='content' style='width:800px;height:300px;'><?php echo ($data['content']); ?></textarea>
 				</td>
 			</tr>
 			<tr>
@@ -35,7 +35,7 @@ $arrType=array('image/jpg','image/gif','image/png','image/bmp','image/pjpeg'); $
 				</td>
 			</tr>
 			<tr>
-				<td>审核：</td>
+				<td>审核</td>
 				<td>
 				<select>
 					<option value='1'>通过</option>

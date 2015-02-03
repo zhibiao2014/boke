@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+	<title>Document</title>
+	<link rel="stylesheet" href="base.css" />
+	<style type="text/css">
+		div.nav ul li{float: left;width:100px;}
+		div.nav ul li ul{display: none;}
+		div.nav ul li:hover ul{display:block;}
+		
+		div.nav1 ul{width:200px;}
+		div.nav1 ul li a{float: left;}
+		div.nav1 ul li{float: none;}
+		div.nav1 ul li ul{width:100px;float: left;display: none;}
+		div.nav1 ul li:hover ul{display: block;}
+	</style>
+</head>
+<body>
+	<div class="nav">
+		<ul>
+			<li><a href="">导航1</a>
+			<ul>
+				<li><a href="">导航1下拉</a></li>
+				<li><a href="">导航1下拉</a></li>
+				<li><a href="">导航1下拉</a></li>
+				<div class="clear"></div>
+			</ul>
+			</li>
+			<li><a href="">导航2</a>
+			<ul>
+				<li><a href="">导航1下拉</a></li>
+				<li><a href="">导航1下拉</a></li>
+				<li><a href="">导航1下拉</a></li>
+				<div class="clear"></div>
+			</ul>
+			</li>
+			<li><a href="">导航3</a></li>
+			<li><a href="">导航4</a></li>
+			<li><a href="">导航5</a></li>
+			<li><a href="">导航6</a></li>
+			<li><a href="">导航7</a></li>
+			<div class="clear"></div>
+		</ul>
+	</div>
+	<hr />
+	<div class="nav1">
+		<ul>
+			<li><a href="">导航1</a>
+			<ul>
+				<li><a href="">导航1下拉</a></li>
+				<li><a href="">导航1下拉</a></li>
+				<li><a href="">导航1下拉</a></li>
+				<div class="clear"></div>
+			</ul><div class="clear"></div>
+			</li>
+			<li><a href="">导航2</a>
+			<ul>
+				<li><a href="">导航1下拉</a></li>
+				<li><a href="">导航1下拉</a></li>
+				<li><a href="">导航1下拉</a></li>
+				<div class="clear"></div>
+			</ul><div class="clear"></div>
+			</li>
+			<li><a href="">导航3</a><div class="clear"></div></li>
+			<li><a href="">导航4</a><div class="clear"></div></li>
+			<li><a href="">导航5</a><div class="clear"></div></li>
+			<li><a href="">导航6</a><div class="clear"></div></li>
+			<li><a href="">导航7</a><div class="clear"></div></li>
+			<div class="clear"></div>
+		</ul>
+	</div>
+</body>
+</html>

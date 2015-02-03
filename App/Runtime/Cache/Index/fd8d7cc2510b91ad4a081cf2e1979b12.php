@@ -133,7 +133,7 @@
 				  <img src="__PUBLIC__/images/det_pic.jpg" alt="" />
 			</div>
 			<div class="det_text">
-				<p class="para">&nbsp&nbsp<?php echo ($detail['content']); ?></p>
+				<p class="para">&nbsp&nbsp{strip_tags($detail['content']})</p>
 				<div class="read_more">
 					 <a class="btn" href="details">评论</a>
 				</div>

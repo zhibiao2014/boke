@@ -1,0 +1,138 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+	<title>Document</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css" />
+	<link rel="stylesheet" href="css/bootstrap-theme.min.css" />
+	<link rel="stylesheet" href="css/style.css" />
+	<link rel="stylesheet" href="css/right.css" />
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+</head>
+<body>
+		<div class="right">
+			<h1>栏目管理</h1>
+			<div class="act">
+				<ul>
+					<li><a href="" class="btn btn-primary">新 增</a></li>
+					<li><a href="" class="btn btn-primary">启 用</a></li>
+					<li><a href="" class="btn btn-primary">禁 用</a></li>
+					<li><a href="" class="btn btn-primary">删除</a></li>
+					<div class="clearfix"></div>
+				</ul>
+				<div class="search">
+					<form action="" class="form-inline">
+    <input type="text" class="form-control" style="width:200px" placeholder="请输入标题或ID">
+						<input type="submit" value="提交" class="btn btn-default"/>
+					</form>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+			<table class="table table-hover">
+				<tr>
+					<th><input type="checkbox" name="" id="" /></th>
+					<th>编号</th>
+					<th>栏目名称</th>
+					<th>是否显示</th>
+					<th>上级栏目</th>
+					<th>栏目类型</th>
+					<th>操作</th>
+				</tr>
+				<tbody>
+					<tr>
+					<td><input type="checkbox" name="" id="" /></td>
+					<td>1</td>
+					<td>新闻</td>
+					<td>显示</td>
+					<td>顶级栏目</td>
+					<td>普通类型</td>
+					<td><a href="">编辑</a> | <a href="">删除</a></td>
+				</tr>
+				<tr>
+					<td><input type="checkbox" name="" id="" /></td>
+					<td>1</td>
+					<td>新闻</td>
+					<td>显示</td>
+					<td>顶级栏目</td>
+					<td>普通类型</td>
+					<td><a href="">编辑</a> | <a href="">删除</a></td>
+				</tr>
+				<tr>
+					<td><input type="checkbox" name="" id="" /></td>
+					<td>1</td>
+					<td>新闻</td>
+					<td>显示</td>
+					<td>顶级栏目</td>
+					<td>普通类型</td>
+					<td><a href="">编辑</a> | <a href="">删除</a></td>
+				</tr>
+				<tr>
+					<td><input type="checkbox" name="" id="" /></td>
+					<td>1</td>
+					<td>新闻</td>
+					<td>显示</td>
+					<td>顶级栏目</td>
+					<td>普通类型</td>
+					<td><a href="">编辑</a> | <a href="">删除</a></td>
+				</tr>
+				<tr>
+					<td><input type="checkbox" name="" id="" /></td>
+					<td>1</td>
+					<td>新闻</td>
+					<td>显示</td>
+					<td>顶级栏目</td>
+					<td>普通类型</td>
+					<td><a href="">编辑</a> | <a href="">删除</a></td>
+				</tr>
+				<tr>
+					<td><input type="checkbox" name="" id="" /></td>
+					<td>1</td>
+					<td>新闻</td>
+					<td>显示</td>
+					<td>顶级栏目</td>
+					<td>普通类型</td>
+					<td><a href="">编辑</a> | <a href="">删除</a></td>
+				</tr>
+				<tr>
+					<td><input type="checkbox" name="" id="" /></td>
+					<td>1</td>
+					<td>新闻</td>
+					<td>显示</td>
+					<td>顶级栏目</td>
+					<td>普通类型</td>
+					<td><a href="">编辑</a> | <a href="">删除</a></td>
+				</tr>
+				<tr>
+					<td><input type="checkbox" name="" id="" /></td>
+					<td>1</td>
+					<td>新闻</td>
+					<td>显示</td>
+					<td>顶级栏目</td>
+					<td>普通类型</td>
+					<td><a href="">编辑</a> | <a href="">删除</a></td>
+				</tr>
+				<tr>
+					<td><input type="checkbox" name="" id="" /></td>
+					<td>1</td>
+					<td>新闻</td>
+					<td>显示</td>
+					<td>顶级栏目</td>
+					<td>普通类型</td>
+					<td><a href="">编辑</a> | <a href="">删除</a></td>
+				</tr>
+				</tbody>
+			</table>
+			<div class="page">
+				<a href="">首页</a>
+				<a href="">上一页</a>
+				<a href="">1</a>
+				<a href="">2</a>
+				<a href="">3</a>
+				<a href="">4</a>
+				<a href="">5</a>
+				
+			</div>
+		</div>
+</body>
+</html>

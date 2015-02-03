@@ -10,7 +10,7 @@
 </head>
 <body>
 	<div id="top">
-		<div class='logo'></div>
+		<a href='__ROOT__' class='home' target="_black"><div class='logo'></div></a>
 		<div class='t_title'>后台管理中心</div>
 		<div class='menu'>
 			<ul>
