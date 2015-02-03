@@ -729,3 +729,57 @@
     $array = explode(",", $housetype);
     return $array[0] . "室" . $array[1] . "厅" . $array[2] . "卫" . $array[3] . "厨" . $array[4] . "阳台";
   }
+
+function htmltotext($str){ 
+   $str = preg_replace("/<style .*?</style>/is", "", $str);  $str = preg_replace("/<script .*?</script>/is", "", $str); 
+   $str = preg_replace("/<br s*/?/>/i", "n", $str); 
+   $str = preg_replace("/</?p>/i", "nn", $str); 
+   $str = preg_replace("/</?td>/i", "n", $str); 
+   $str = preg_replace("/</?div>/i", "n", $str); 
+   $str = preg_replace("/</?blockquote>/i", "n", $str); 
+   $str = preg_replace("/</?li>/i", "n", $str); 
+   $str = preg_replace("/&nbsp;/i", " ", $str); 
+   $str = preg_replace("/&nbsp/i", " ", $str); 
+   $str = preg_replace("/&amp;/i", "&", $str); 
+   $str = preg_replace("/&amp/i", "&", $str); 
+   $str = preg_replace("/&lt;/i", "<", $str); 
+   $str = preg_replace("/&lt/i", "<", $str); 
+   $str = preg_replace("/&ldquo;/i", '"', $str); 
+   $str = preg_replace("/&ldquo/i", '"', $str); 
+   $str = preg_replace("/&lsquo;/i", "'", $str); 
+   $str = preg_replace("/&lsquo/i", "'", $str); 
+   $str = preg_replace("/&rsquo;/i", "'", $str); 
+   $str = preg_replace("/&rsquo/i", "'", $str); 
+   $str = preg_replace("/&gt;/i", ">", $str); 
+   $str = preg_replace("/&gt/i", ">", $str); 
+   $str = preg_replace("/&rdquo;/i", '"', $str); 
+   $str = preg_replace("/&rdquo/i", '"', $str); 
+   $str = strip_tags($str); 
+   $str = html_entity_decode($str, ENT_QUOTES, "utf-8"); 
+   $str = preg_replace("/&#.*?;/i", "", $str); 
+   return $str; 
+  }
+
+function uploadify()
+ {
+    if (!empty($_FILES)) {
+        import("@.ORG.UploadFile");
+        $upload = new \Org\UploadFile();
+        $upload->maxSize = 2048000;
+        $upload->allowExts = array('jpg','jpeg','gif','png');
+        $upload->savePath = "./Public/images/";
+        $upload->thumb = true; //设置缩略图
+        $upload->imageClassPath = "@.ORG.Image";
+        $upload->thumbPrefix = "130_,75_,24_"; //生成多张缩略图
+        $upload->thumbMaxWidth = "130,75,24";
+        $upload->thumbMaxHeight = "130,75,24";
+        $upload->saveRule = uniqid; //上传规则
+        $upload->thumbRemoveOrigin = true; //删除原图
+        if(!$upload->upload()){
+            $this->error($upload->getErrorMsg());//获取失败信息
+        } else {
+            $info = $upload->getUploadFileInfo();//获取成功信息
+        }
+        echo $info[0]['savename'];    //返回文件名给JS作回调用
+    }
+ }

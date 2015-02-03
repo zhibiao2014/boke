@@ -1,0 +1,473 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>
+{title}
+</title>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="keywords" content="西安交通大学 电气工程学院">
+<meta name="description" content="西安交通大学 电气工程学院">
+<link href="http://ee.xjtu.edu.cn/new_ee/ee.css" rel="stylesheet" type="text/css">
+<SCRIPT src="http://ee.xjtu.edu.cn/new_ee/external.js" type=text/javascript></SCRIPT>
+
+</head>
+<body>
+<table width="851" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="851"><img name="index_r1_c1" src="http://ee.xjtu.edu.cn/images/index_r1_c1.gif" width="850" height="10" border="0" alt=""></td>
+  </tr>
+</table>
+<table width="850" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="25" valign="top" background="http://ee.xjtu.edu.cn/images/index_r5_c1.gif"><img name="index_r2_c1" src="images/index_r2_c1.gif" width="25" height="57" border="0" alt=""></td>
+    <td><table width="800" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="185"><img src="images/index_03.jpg" width="447" height="113"></td>
+        <td width="353"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td height="41" valign="bottom" background="images/index_04.jpg"><table width="100%" height="25" border="0" cellpadding="0" cellspacing="0">
+              <tr>
+                <td width="50">&nbsp;</td>
+                <td align="right">
+<a href="english/index_en.htm" class="white" target="_blank">English Version</a><span class="blue">|</span>
+				<!--<a href="mailto:mzrong@mail.xjtu.edu.cn" class="white">院长信箱</a> 
+				<span class="blue">|</span> 
+				<a href="mailto:zrpeng@mail.xjtu.edu.cn" class="white">书记信箱</a> 
+				<span class="blue">|</span> -->
+			<a href="#" class="white" onClick="javascript:window.external.AddFavorite('http://ee.xjtu.edu.cn', 	'电气工程学院主页')" >   
+			收藏
+			</a> 
+				</td>
+                <td>&nbsp;&nbsp;&nbsp;</td>
+              </tr>
+            </table></td>
+          </tr>
+          <tr>
+            <td height="72" background="images/index_09.jpg"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td width="221">&nbsp;</td>
+                <td width="107"><img src="images/index_08.jpg" width="107" height="72"></td>
+                <td>&nbsp;</td>
+              </tr>
+            </table></td>
+          </tr>
+        </table></td>
+      </tr>
+    </table>
+        <table width="800" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="185"><img src="images/index_10.jpg" width="185" height="67"></td>
+            <td valign="top" background="images/index_11.jpg">
+<DIV class=navSt>
+			<table width="600" border="0" align="right" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td><table width="570" height="30" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="#124F8D" style="border:1px solid #B2D7FD">
+                      <tr>
+                        <td width="74"><a href="index.php"><img name="index_r8_c16" src="images/index_r8_c16.gif" width="74" height="28" border="0" ></a></td>
+                        <td width="6"><img src="images/index_14.jpg" width="6" height="28"></td>
+                        <td width="74"><a onmouseover=showSubmenu(0) >
+						<img id="pic_1" src="images/subnav1_1.gif" width="74" height="28" border="0" alt="">
+						</a></td>
+                        <td width="6"><img src="images/index_14.jpg" width="6" height="28"></td>
+                        <td width="74"><a onmouseover=showSubmenu(1) >
+						<img id="pic_2" src="images/subnav1_2.gif" width="74" height="28" border="0" alt="">
+						</a></td>
+                        <td width="6"><img src="images/index_14.jpg" width="6" height="28"></td>
+                        <td width="74"><a onmouseover=showSubmenu(2) >
+						<img id="pic_3" src="images/subnav1_3.gif" width="74" height="28" border="0" alt="">
+						</a></td>
+                        <td width="6"><img src="images/index_14.jpg" width="6" height="28"></td>
+                        <td width="74"><a onmouseover=showSubmenu(3) >
+						<img id="pic_4" src="images/subnav1_4.gif" width="74" height="28" border="0" alt="">
+						</a></td>
+                        <td width="6"><img src="images/index_14.jpg" width="6" height="28"></td>
+                        <td width="74"><a onmouseover=showSubmenu(4) >
+						<img id="pic_5" src="images/subnav1_5.gif" width="74" height="28" border="0" alt="">
+						</a></td>
+                        <td width="6"><img src="images/index_14.jpg" width="6" height="28"></td>
+                        <td><a href="http://ee.xjtu.edu.cn/eecjob/index.php" target="_blank">
+						<img  src="images/subnav1_6.gif" width="74" height="28" border="0" alt="">
+						</a></td>
+                      </tr>
+                  </table></td>
+                </tr>
+                <tr>
+                  <td height="30" align="center" style="color:#ffffff">
+<DIV class="navSubSt" id="subnav_1" >
+<A href="content.php?page=dao_hang&sortid=15" class="white" >学院简介</A> · 
+<A href="content.php?page=dao_hang&sortid=16&articleid=2" class="white" >机构设置</A> · 
+<A href="content.php?page=dao_hang&sortid=17&articleid=3" class="white" >历史沿革</A> ·
+<A href="content.php?page=dao_hang&sortid=18&articleid=6" class="white" >学院领导</A> ·  
+<A href="content.php?page=dao_hang&sortid=19" class="white" >师资队伍</A> · 
+<A href="content.php?page=dao_hang&sortid=20" class="white">院士信息</A> ·
+<A href="http://www.xjtu.edu.cn/szdw/institute/13004000.html" class="white">博导信息</A> ·
+<A href="content.php?page=dao_hang&sortid=21" class="white">办事指南</A> 
+</DIV>
+
+<DIV class="navSubSt" id="subnav_2" >
+<A href="content.php?page=dao_hang&sortid=35" class="white" >本科生培养</A> · 
+<A href="content.php?page=dao_hang&sortid=40" class="white" >研究生培养</A> ·
+<A href="http://ee.xjtu.edu.cn/new_ee/zhuoyue.htm" class="white" >卓越工程师培养</A> · 
+<A href="content.php?page=search_news&type=title&sortid=50" class="white" >工程硕士培养</A> 
+</DIV>
+
+<DIV class="navSubSt" id="subnav_3" >
+<A href="content.php?page=dao_hang&sortid=51" class="white" >科研机构</A> · 
+<A href="content.php?page=dao_hang&sortid=25" class="white" >科研项目</A> · 
+<A href="content.php?page=dao_hang&sortid=26" class="white" >科研成果</A> · 
+<A href="content.php?page=dao_hang&sortid=27" class="white" >学科分类</A> ·
+<A href="content.php?page=dao_hang&sortid=28" class="white" >科研基地</A> ·
+<A href="content.php?page=dao_hang&sortid=30" class="white" >仪器设备</A> · 
+<A href="content.php?page=dao_hang&sortid=29" class="white" >规章制度</A>
+</DIV>
+
+<DIV class="navSubSt" id="subnav_4" >
+<A href="content.php?page=dao_hang&sortid=31" class="white" >学生天地</A> · 
+<A href="http://202.117.25.185/newweb/xstd/xsdj/index.php" target="_blank" class="white" >学生党建</A> · 
+<A href="content.php?page=dao_hang&sortid=56" target="_blank" class="white" >学院工会</A> · 
+<A href="http://ee.xjtu.edu.cn/new_ee/content.php?page=search_news&type=title&sortid=65" target="_blank" class="white" >创先争优</A>
+</DIV>
+
+<DIV class="navSubSt" id="subnav_5" >
+<A href="content.php?page=dao_hang&sortid=32" class="white" >学术会议</A> · 
+<A href="content.php?page=dao_hang&sortid=33" class="white" >学院校友</A> · 
+<A href="content.php?page=dao_hang&sortid=34" class="white" >国际交流</A> ·
+<A href="http://meeting.xjtu.edu.cn/front/" class="white" >学术资源</A> 
+
+</DIV>
+				</td>
+                    </tr>
+                  </table>
+                </div></td>
+          </tr>
+      </table></td>
+    <td width="25" valign="top" background="images/index_r5_c44.gif"><img name="index_r2_c44" src="images/index_r2_c44.gif" width="25" height="57" border="0" alt=""></td>
+  </tr>
+</table>
+<table width="850" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td><img name="index_r22_c1" src="images/index_r22_c1.gif" width="850" height="12" border="0" alt=""></td>
+  </tr>
+</table>
+<table width="850" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="25" background="images/index_r5_c1.gif">&nbsp;</td>
+    <td width="208" valign="top" >
+	<!--左侧信息栏开始-->
+	
+	<table width="208" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td><img src="images/index_16.jpg" width="208" height="28"></td>
+      </tr>
+      <tr>
+        <td valign="top" background="images/index_27.jpg">
+		
+		<div id="left">
+		<!--左侧信息栏开始-->
+		
+		  <table width="180" border="0" align="center" cellpadding="0" cellspacing="0">
+          <tr>
+            <td><div align="center"><img src="images/hot.jpg" width="153" height="26"></div></td>
+          </tr>
+        </table>
+ 		<table width="180" border="0" align="center" cellpadding="0" cellspacing="0"><tr>
+		<td width="20" height="22"><img name="index_r28_c6" src="images/arrow3.gif" width="12" height="12" border="0" alt=""></td>
+		<td><a href="http://ee.xjtu.edu.cn/new_ee/content.php?articleid=5220"  target="_self"  title="电气学院2014年工学硕士学位论文盲审的具体安排(点击773次)"> 电气学院2014年工..</a></td><td style="width:30px;color:#cccccc">01-10</td></tr><tr>
+		<td width="20" height="22"><img name="index_r28_c6" src="images/arrow3.gif" width="12" height="12" border="0" alt=""></td>
+		<td><a href="http://ee.xjtu.edu.cn/new_ee/content.php?articleid=5221"  target="_self"  title="电气学院2013年在职工程硕士第二次复试和面试的安排(点击467次)"> 电气学院2013年在..</a></td><td style="width:30px;color:#cccccc">01-14</td></tr><tr>
+		<td width="20" height="22"><img name="index_r28_c6" src="images/arrow3.gif" width="12" height="12" border="0" alt=""></td>
+		<td><a href="http://ee.xjtu.edu.cn/new_ee/content.php?articleid=5222"  target="_self"  title="电气学院2013年在职工程硕士第二次复试和面试的安排(点击78次)"> 电气学院2013年在..</a></td><td style="width:30px;color:#cccccc">01-14</td></tr></table>
+		  
+		  <!--左侧信息栏结束-->
+		 </div> 
+          <table width="186" border="0" align="center" cellpadding="0" cellspacing="0">
+            <tr>
+              <td height="16"><div align="center"><img src="images/index_38.jpg" width="186" height="5"></div></td>
+            </tr>
+            <tr>
+              <td><div align="center"><img src="images/index_41.jpg" width="153" height="29"></div></td>
+            </tr>
+          </table>
+		  <!--表单开始-->
+ <table style="width:180px; margin-left:9px; margin-right:9px;">
+<tr>
+<td align="center"><a id="menu0" class="menu_type1" onclick="show_menu(0)">新&nbsp;闻</a></td>
+<td align="center"><a id="menu1" class="menu_type2" onclick="show_menu(1)">教&nbsp;师</a></td>
+<td align="center"><a id="menu2" class="menu_type2" onclick="show_menu(2)">学&nbsp;生</a></td>
+<td align="center"><a id="menu3" class="menu_type2" onclick="show_menu(3)">电&nbsp;话</a></td>
+</tr>
+<tr><td colspan="4">
+<div id="search0" style="display:block; border-top:1px solid #438bd9; ">
+<form action="content.php" method="get">
+<input type="hidden" name="page" value="search_news" />
+<table>
+<tr><td>关键字:</td><td><input type="text" name="keywords" style="width:122px;"/></td></tr>
+<tr><td>字&nbsp;&nbsp;段:</td><td>
+<select name="type" style="width:128px;" >
+<option value="title" selected="selected">标题</option>
+<option value="article_text">内容</option>
+</select>
+</td></tr>
+<tr><td>分&nbsp;&nbsp;类:</td><td>
+<select name="sortid" style="width:128px;" >
+<option value="" selected="selected">所有分类</option>
+<option value="7">信息公告</option>
+<option value="8">电气人家</option>
+<option value="9">校园动态</option>
+<option value="10">青年话题</option>
+<option value="11">学习信息</option>
+<option value="12">生活在线</option>
+<option value="13">请您留言</option>
+<option value="14">本站系统</option>
+<option value="15">学院概述&gt;&gt;学院简介</option>
+<option value="16">学院概述&gt;&gt;机构设置</option>
+<option value="17">学院概述&gt;&gt;历史沿革</option>
+<option value="18">学院概述&gt;&gt;学院领导</option>
+<option value="19">学院概述&gt;&gt;师资力量</option>
+<option value="20">学院概述&gt;&gt;院士信息</option>
+<option value="21">学院概述&gt;&gt;办事指南</option>
+<option value="51">科学研究&gt;&gt;科研机构</option>
+<option value="25">科学研究&gt;&gt;科研项目</option>
+<option value="26">科学研究&gt;&gt;科研成果</option>
+<option value="27">科学研究&gt;&gt;重点学科</option>
+<option value="28">科学研究&gt;&gt;重点实验室</option>
+<option value="29">科学研究&gt;&gt;规章制度</option>
+<option value="30">科学研究&gt;&gt;办事指南</option>
+<option value="31">学生天地&gt;&gt;学生天地</option>
+<option value="32">合作交流&gt;&gt;学术会议</option>
+<option value="33">合作交流&gt;&gt;校友联络</option>
+<option value="34">合作交流&gt;&gt;国际交流</option>
+<option value="35">本科生&gt;&gt;专业介绍</option>
+<option value="36">本科生&gt;&gt;招生信息</option>
+<option value="37">本科生&gt;&gt;教学成果</option>
+<option value="38">本科生&gt;&gt;规章制度</option>
+<option value="39">本科生&gt;&gt;办事指南</option>
+<option value="40">研究生&gt;&gt;招生简章</option>
+<option value="41">研究生&gt;&gt;培养方案</option>
+<option value="42">研究生&gt;&gt;课程介绍</option>
+<option value="43">研究生&gt;&gt;优秀论文</option>
+<option value="44">研究生&gt;&gt;规章制度</option>
+<option value="45">研究生&gt;&gt;办事指南</option>
+<option value="46">工程硕士&gt;&gt;招生简章</option>
+<option value="47">工程硕士&gt;&gt;培养方案</option>
+<option value="48">工程硕士&gt;&gt;规章制度</option>
+</select>
+</td></tr>
+<tr><td>&nbsp;</td><td><input type="submit" value="查询" class="submit"/></td></tr>
+</table></form>
+</div>
+<div id="search1" style="display:none;border-top:1px solid #438bd9;">
+<form action="content.php" method="get">
+<input type="hidden" name="page" value="search_teacher" />
+<table>
+<tr><td >教师姓名:</td><td><input type="text" name="name" class="inputsearch3" /></td></tr>
+<tr><td >教师职称:</td><td>
+<select name="zhicheng" class="inputsearch4">
+<option  value="" selected="selected">全部</option>
+<option value="教授(博导)">教授(博导)</option>
+<option value="教授">教授</option>
+<option value="副教授">副教授</option>
+<option value="高工">高工</option>
+<option value="讲师">讲师</option>
+<option value="工程师">工程师</option>
+<option value="助教">助教</option>
+</select>
+</td></tr>
+<tr><td>所在单位:</td><td>
+<select name="department" class="inputsearch4">
+ <option value="" selected="selected">全部</option>
+ <option value="三电中心" >三电中心</option>
+ <option value="电机">电机</option>
+ <option value="电器">电器</option>
+ <option value="测控">测控</option>
+ <option value="高压">高压</option>
+ <option value="绝缘">绝缘</option>
+ <option value="工企">工企</option>
+ <option value="发电">发电</option>
+ <option value="机关">机关</option>
+ <option value="公司">公司</option>
+ <option value="退休">退休</option>
+ </select>
+ </td></tr>
+ <tr><td>研究方向:</td><td><input  type="text" name="major" class="inputsearch3"></td></tr>
+<tr><td>&nbsp;</td><td ><input type="submit" value="查询" class="submit" /></td></tr>
+</table>
+</form>
+</div>
+<div id="search2" style="display:none; border-top:1px solid #438bd9;">
+<form action="content.php" method="get">
+<input type="hidden" name="page" value="search_student" />
+<table>
+<tr><td>查找字段</td><td><select name="type" class="inputsearch4">
+                                    <option value="name" selected="selected">姓名</option>
+									<option value="id">学号</option>
+                                    <option value="class">班级</option>
+									<option value="type">学生类别</option>
+									<option value="major">专业方向</option>
+                                    <option value="dorm">宿舍</option>
+                                    <option value="telephone">电话</option>
+                                    <option value="home">省份</option>
+                         </select>
+</td></tr>
+<tr><td>关键字</td><td><input type="text" name="keywords"  class="inputsearch3"/></td></tr>
+<tr><td>&nbsp;</td><td ><input type="submit" value="查询" class="submit" /></td></tr>
+</table>
+</form>
+</div>
+<div id="search3" style="display:none; border-top:1px solid #438bd9;">
+<form action="content.php" method="get">
+<input type="hidden" name="page" value="search_tel" />
+<table >
+<tr><td align="center">单位名称:<input type="text" name="keywords" class="inputsearch3" /></td></tr>
+<tr><td align="center"><input type="submit" value="查询" class="submit"/></td></tr>
+</table>
+</form>
+</div>
+</td></tr>
+</table>
+
+  <!--表单结束-->
+          </td>
+      </tr>
+      <tr>
+        <td><IMG SRC="images/index_52.jpg" WIDTH=208 HEIGHT=13 ALT=""></td>
+      </tr>
+    </table>
+	
+	<!--左侧信息栏结束-->
+	</td>
+	<td valign="top">
+	
+	
+	
+	
+	<!--位置导航开始-->
+	<table width="580" border="0" align="center" cellpadding="0" cellspacing="0">
+      <tr>
+        <td width="132"><img src="images/a7.gif" width="132" height="22"></td>
+        <td background="images/index_19.jpg">&nbsp;</td>
+        <td width="24"><img src="images/index_21.jpg" width="24" height="22"></td>
+      </tr>
+      
+    </table>
+      <table width="580" border="0" align="center" cellpadding="0" cellspacing="0">
+        <tr>
+          <td height="6" background="images/index_24.jpg"></td>
+        </tr>
+      </table>
+      <table width="580" border="0" align="center" cellpadding="0" cellspacing="0">
+        <tr>
+          <td height="30">当前位置：<a href="index.php">首页</a>&gt;&gt;<a href="content.php?page=search_news&type=title&sortid=7">信息公告</a>        </td>
+        </tr>
+        <tr>
+          <td height="8"><img src="images/index_33.jpg" width="243" height="8"></td>
+        </tr>
+      </table>
+	 <!--位置导航结束-->  
+
+	  <!--内容区域开始  -->
+	  
+	<table width="580" border="0" align="center" cellpadding="0" cellspacing="0">
+    <tr>
+     <td class="newstitle">{title}</td>
+    </tr>
+    <tr>
+      <td><div align="center" style="color:#cccccc">
+	  2014-01-14 15:12&nbsp;
+	  责任编辑:薛萍&nbsp;
+	  来源:电气学院&nbsp;
+	  浏览:467次
+	  </div></td>
+    </tr>
+	<tr>
+     <td><hr></td>
+    </tr>
+    <tr>
+      <td >{content}</td>
+	</tr>
+	
+		<tr>
+          <td><hr></td>
+        </tr>
+		<tr>
+	  	  <td>	<div class="content">
+		  		<table width="540" border="0" align="center" cellpadding="0" cellspacing="0">
+				<tr>
+					<td height="40"><img src="images/index_49.jpg" width="94" height="20"></td>
+				</tr>
+				<tr>
+					<td>
+						<table width="480" align="center" cellpadding="0" cellspacing="0"><tr><td height="20">1
+				<a href="http://ee.xjtu.edu.cn/new_ee/content.php?articleid=5222"  target="_self"  title="电气学院2013年在职工程硕士第二次复试和面试的安排"> 电气学院2013年在职工程硕士第二次复试和面试的安排</a><span style="color:#cccccc">(2014-01-14)</span></td></tr><tr><td height="20">2
+				<a href="http://ee.xjtu.edu.cn/new_ee/content.php?articleid=4923"  target="_self"  title="2013电气学院在职工程硕士专业课考试考场安排"> 2013电气学院在职工程硕士专业课考试考场安排</a><span style="color:#cccccc">(2013-11-27)</span></td></tr><tr><td height="20">3
+				<a href="http://ee.xjtu.edu.cn/new_ee/content.php?articleid=4915"  target="_self"  title="电气学院关于2013年在职工程硕士专业课复试和面试的安排"> 电气学院关于2013年在职工程硕士专业课复试和面试的安排</a><span style="color:#cccccc">(2013-11-18)</span></td></tr><tr><td height="20">4
+				<a href="http://ee.xjtu.edu.cn/new_ee/content.php?articleid=4914"  target="_self"  title="2013年在职工程硕士专业课复试和面试的安排"> 2013年在职工程硕士专业课复试和面试的安排</a><span style="color:#cccccc">(2013-11-18)</span></td></tr><tr><td height="20">5
+				<a href="http://ee.xjtu.edu.cn/new_ee/content.php?articleid=4652"  target="_self"  title="西安交通大学2013年在职人员攻读电气工程专业（专业代码：085207）工程硕士招生简章"> 西安交通大学2013年在职人员攻读电气工程专业（专业代码：085207）工程硕士招生...</a><span style="color:#cccccc">(2013-06-24)</span></td></tr><tr><td height="20">6
+				<a href="http://ee.xjtu.edu.cn/new_ee/content.php?articleid=4651"  target="_self"  title="西安交通大学2013年在职人员攻读电气工程专业（专业代码：085207）工程硕士招生简章"> 西安交通大学2013年在职人员攻读电气工程专业（专业代码：085207）工程硕士招生...</a><span style="color:#cccccc">(2013-06-24)</span></td></tr></table>
+				 	</td>
+				 </tr>
+				 </table>
+				 </div>
+			</td>
+		 </tr>
+		</table>
+	   <!--内容区域结束 -->
+
+	  
+	  </td>
+	  <td width="25" background="images/index_r5_c44.gif">&nbsp;</td>
+  </tr>
+</table>
+<table width="850" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="25" background="images/index_r5_c1.gif">&nbsp;</td>
+    <td width="168"><img name="index_r31_c2" src="images/index_r31_c2.gif" width="168" height="44" border="0" alt=""></td>
+    <td valign="middle" background="images/index_r31_c9.gif">
+	
+	<a href="http://xf.xjtu.edu.cn" class="gray" target="_blank">校园先锋时空</a> <span class="blue">|</span> 
+	<a href="http://www.xjtu.edu.cn" class="gray" target="_blank">西安交通大学</a> <span class="blue">|</span> 
+	<a href="http://ee.xjtu.edu.cn/newweb/eemap/" class="gray" target="_blank">学院地图</a> <span class="blue">|</span> 
+	<a href="http://sklei.xjtu.edu.cn" class="gray" target="_blank">绝缘国家重点实验室</a> <span class="blue">|</span> 
+	<a href="http://riugcee2008.xjtu.edu.cn" class="gray" target="_blank"><span style="color:red;" >riugcee2008</span></a> <span class="blue">|</span> 
+	<SELECT onchange="open_lian_jie(this)"  style="width:114px;"> 
+	<OPTION selected>----友情链接-----</OPTION> 
+	<OPTION value="http://iic.xjtu.edu.cn"/>工业智能控制研究室</OPTION> 
+	<OPTION value="http://unit.xjtu.edu.cn/unit/mmrc"/>多学科材料研究中心</OPTION> 
+	<OPTION value="http://jc.cepp.com.cn"/>电力出版社教材中心</OPTION> 
+	<OPTION value="http://www.perec.xjtu.edu.cn"/>电力电子与新能源</OPTION> 
+	<OPTION value="http://www.au.tsinghua.edu.cn"/>清华大学自动化系</OPTION>
+	<OPTION value="http://dee.hust.edu.cn"/>华中科大电气学院</OPTION> 
+	<OPTION value="http://ee.zju.edu.cn"/>浙江大学电气学院</OPTION> 
+	<OPTION value="http://eirc.xjtu.edu.cn"/>电气绝缘研究中心</OPTION> 
+	<OPTION value="http://mcp.xjtu.edu.cn"/>微机原理课程网站</OPTION>  
+	<OPTION value="http://www.chinahva.com"/>中国高压电器网</OPTION> 
+	<OPTION value="http://hv.xjtu.edu.cn"/>高电压教研室</OPTION>
+	</SELECT>
+	
+	</td>
+    <td width="25" background="images/index_r5_c44.gif">&nbsp;</td>
+  </tr>
+</table>
+<table width="850" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="25" valign="top"><img src="images/bottom_left.gif" width="25" height="95"></td>
+    <td><div align="center">———————————————————————————————————————— <br>
+       
+	    <a href="content.php?articleid=332" class="gray">本站介绍</a> <span class="blue">|</span>
+	    <a href="content.php?page=about_us&articleid=39" class="gray">关于我们</a> <span class="blue">|</span> 
+		<a href="content.php?articleid=333" class="gray">网站地图</a> <span class="blue">|</span>
+		<a href="content.php?articleid=334" class="gray"> 版权声明</a> <span class="blue">|</span> 
+		<a href="content.php?page=suggestion" class="gray">请您留言</a>
+		<br>
+       Copyright By XianFeng Web Studio, All Rights Reserved. 
+       <br>
+      先锋网工作室设计维护  2007－03－14<br>
+      <br>
+    </div></td>
+    <td width="25" valign="top"><img src="images/bottom_right.gif" width="25" height="95"></td>
+  </tr>
+</table>
+</body>
+</html>
+	

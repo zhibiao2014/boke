@@ -6,10 +6,8 @@
 	<link rel="stylesheet" href="__PUBLIC__/Css/common.css" />
 	<script type="text/javascript" src='__PUBLIC__/Js/jquery-1.8.2.min.js'></script>
 	<script type="text/javascript" src='__PUBLIC__/Js/common.js'></script>
+    <script src="__PUBLIC__/Js/uploadify/jquery.uploadify.min.js" type="text/javascript"></script>
 </head>
-<?php
-$arrType=array('image/jpg','image/gif','image/png','image/bmp','image/pjpeg'); $max_size='500000'; $upfile='./image/human'; $file=$_FILES['upfile']; if($_SERVER['REQUEST_METHOD']=='POST'){ if(!is_uploaded_file($file['tmp_name'])){ echo "<font color='#FF0000'>文件不存在！</font>"; exit; } if($file['size']>$max_size){ echo "<font color='#FF0000'>上传文件太大！</font>"; exit; } if(!in_array($file['type'],$arrType)){ echo "<font color='#FF0000'>上传文件格式不对！</font>"; exit; } if(!file_exists($upfile)){ mkdir($upfile,0777,true); } $imageSize=getimagesize($file['tmp_name']); $img=$imageSize[0].'*'.$imageSize[1]; $fname=$file['name']; $ftype=explode('.',$fname); $picName=$upfile."/cloudy".$fname; if(file_exists($picName)){ echo "<font color='#FF0000'>同文件名已存在！</font>"; exit; } if(!move_uploaded_file($file['tmp_name'],$picName)){ echo "<font color='#FF0000'>移动文件出错！</font>"; exit; } else{ echo "<font color='#FF0000'>图片文件上传成功！</font><br/>"; echo "<font color='#0000FF'>图片大小：$img</font><br/>"; echo "图片预览：<br><div style='border:#F00 1px solid; width:200px;height:200px'>
-    <img src=\"".$picName."\" width=200px height=200px>".$fname."</div>"; } } ?>
 <body>
 	<div class='status'>
 		<span>发布博客</span>
@@ -17,23 +15,63 @@ $arrType=array('image/jpg','image/gif','image/png','image/bmp','image/pjpeg'); $
 	<form action="<?php echo U('runAddBoke');?>" method='post' enctype="multipart/form-data">
 		<table width="50%">
 			<tr>
-				<td width='25%' align='right'>标题：</td>
+				<td width='25%' align='right'>标题</td>
 				<td>
 					<input type="text" name='title' style='font-size:30px' />
 				</td>
 			</tr>
 			<tr>
-				<td align='right'>内容：</td>
+				<td align='right'>内容</td>
 				<td>
-					<textarea id="editor_id" name="content" style="width:500px;height:300px;"></textarea>
+					<textarea name='content' style='width:800px;height:300px;'></textarea>
 				</td>
 			</tr>
 			<tr>
 				<td align='right'>上传图片</td>
 				<td>
-					<input name='upfile' type='file'/>
-					<input name="btn" type="submit" value="上传" /><br />
-				</td>
+                  <div class="col-tab pad-10">
+    <ul class="tabBut cu-li">
+      <li id="tab_attach_1" class="on" onclick="SwapTab('attach','on','',4,1);">上传附件</li>
+      <li id="tab_attach_2" onclick="SwapTab('attach','on','',4,2);">网络文件</li>
+      <li id="tab_attach_3" onclick="SwapTab('attach','on','',4,3);set_iframe('album_list','<?php echo U('Attachment/album_list');?>');">图库</li>
+      <li id="tab_attach_4" onclick="SwapTab('attach','on','',4,4);">目录浏览</li>
+    </ul>
+    <div class="content" id="div_attach_1">
+      <div class="img_upload">
+        <form>
+          <input id="file_upload" name="file_upload" type="file" multiple="true">
+          <a href="javascript:$('#file_upload').uploadify('upload','*');" class="btupload">开始上传</a>
+        </form>
+        <div id="nameTip" class="onShow"><?php echo L('upload_up_to')?><font color="red"> <?php echo $args['file_upload_limit']; ?></font> <?php echo L('attachments')?>,<?php echo L('largest')?> <font color="red"><?php echo $file_size_limit?></font></div>
+        <div class="bk3"></div>
+      </div>
+      <div class="bk3"></div>
+      <div class="lh24">
+        <?php echo L('supported')?> <font style="font-family: Arial, Helvetica, sans-serif"><?php echo str_replace(array('*.',';'),array('','、'),$args['file_types'])?></font> <?php echo L('formats')?>
+      </div>
+      <input type="checkbox" id="watermark_enable" value="1" <?php if(isset($watermark_enable) &&$watermark_enable == 1) echo 'checked'?> onclick="change_params()"> <?php echo L('watermark_enable')?>
+      <div class="bk10"></div>
+      <fieldset class="blue pad-10" id="swfupload">
+        <legend>列表</legend>
+        <div id="progress"></div>
+        <ul id="attachment_list">
+        </ul>
+      </fieldset>
+    </div>
+    <div id="div_attach_2" class="contentList pad-10 hidden">
+      <div class="bk10"></div>
+      请输入网络地址<div class="bk3"></div><input type="text" name="info[filename]" class="input-text" value="" style="width:350px;" onblur="addonlinefile(this)">
+      <div class="bk10"></div>
+    </div>
+    <div id="div_attach_3" class="contentList pad-10 hidden">
+      <iframe name="album-list" src="javascript:void(0);" scrolling="no" width="100%" height="345" style="overflow-x:hidden;border:none" allowtransparency="true" id="album_list" ></iframe>
+    </div>
+    <div id="div_attach_4" class="contentList pad-10 hidden"></div>
+  </div>
+  <div id="att-status" class="hidden"></div>
+  <div id="att-status-del" class="hidden"></div>
+  <div id="att-name" class="hidden"></div>
+               </td>
 			</tr>
 			<tr>
 				<td colspan='2'>
