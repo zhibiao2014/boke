@@ -10,7 +10,7 @@
 </head>
 <body>
 	<div id="top">
-		<div class='logo'></div>
+		<a href='__ROOT__' target='_blank' class='home'><div class='logo'></div></a>
 		<div class='t_title'>后台管理中心</div>
 		<div class='menu'>
 			<ul>
@@ -29,7 +29,7 @@
 			</ul>
 			<div id='user'>
 				<span class='user_state'>当前管理员：[<?php echo ($_SESSION['username']); ?>]</span>
-				<a href="<?php echo U('loginOut');?>" target='_self' id='login_out'></a>
+				<a href="<?php echo U('loginOut');?>" target='_self' id='login_out'></a>&nbsp&nbsp
 			</div>
 		</div>
 	</div>
