@@ -74,7 +74,7 @@
             <tr>
                 <td width='25%' align='right'>特色</td>
                 <td>
-                    <textarea name='tag' style="font-size:18px" rows="8">{$data["tag"]}</textarea>
+                    <textarea name='tag' style="font-size:18px"  cols="60px" rows="8" style='font-size:10px'>{$data["tag"]}</textarea>
                 </td>
             </tr>
 			<tr>
@@ -97,15 +97,18 @@
 					<input type="hidden" name="picture" id="" value=""/>
 				</td>
 			</tr>
+            <tr>
+            <td><font color="red">*</font>类型</th>
+                <td>
+                  <?php echo Form::select(array('随记','热门文章','特色文章'),  $data['type'],'name=type id="type"'); ?>
+              </td>
+          </tr>
 			<tr>
 				<td>审核</td>
-				<td>
-				<select>
-					<option value='1'>通过</option>
-					<option value='0'>不通过</option>
-				</select>
-				</td>
-			</tr>
+                <td>
+                  <?php echo Form::radio(array('0' => '否', '1' => '是'), $data['ispass'], 'name=ispass', '90', 'commission' ); ?>
+              </td>
+          </tr>
 			<tr>
 				<td colspan='2'>
 					<input type="submit" value='发布' class='big-btn'/>

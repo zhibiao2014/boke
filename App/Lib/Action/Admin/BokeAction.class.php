@@ -38,6 +38,7 @@ Class BokeAction extends Action {
 		$data=array(
 			'title' => $this->_post('title'),
 			'tag' => $this->_post('tag'),
+			'type' => $this->_post('type'),
 			'content' => $this->_post('content'),
 			'create_at'=>date('Y-m-d H:i',time()),
 			'update_at'=>date('Y-m-d H:i',time()),
@@ -50,6 +51,7 @@ Class BokeAction extends Action {
 		}
 	}
 	public function editBoke(){
+		import("ORG.Util.Form");
 		$id=$this->_get('id');
 		$this->data=M('boke')->find($id);
 		$this->display();
@@ -58,6 +60,7 @@ Class BokeAction extends Action {
 		$data=array(
 			'title' => $this->_post('title'),
 			'tag' => $this->_post('tag'),
+			'ispass' => $this->_post('ispass'),
 			'content' => $this->_post('content'),
 			'update_at'=>date('Y-m-d H:i',time()),
 			'uname'=>$_SESSION['username'],
