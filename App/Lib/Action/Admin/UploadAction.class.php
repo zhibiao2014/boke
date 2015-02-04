@@ -1,5 +1,9 @@
 <?php
-class IndexAction extends Action {
+class UploadAction extends Action {
+	function index() {
+		$this->display ();
+	}
+	
 	function s(){
 
 	}

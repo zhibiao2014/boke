@@ -1,6 +1,6 @@
 function fileQueueError(file, errorCode, message){
     try {
-        var imageName = window.path+"/images/error.gif";
+        var imageName = window.path+"/Images/error.gif";
         var errorName = "";
         if (errorCode === SWFUpload.errorCode_QUEUE_LIMIT_EXCEEDED) {
             errorName = "您上传的文件过多！";
@@ -13,10 +13,10 @@ function fileQueueError(file, errorCode, message){
         
         switch (errorCode) {
             case SWFUpload.QUEUE_ERROR.ZERO_BYTE_FILE:
-                imageName = window.path+"/images/zerobyte.gif";
+                imageName = window.path+"/Images/zerobyte.gif";
                 break;
             case SWFUpload.QUEUE_ERROR.FILE_EXCEEDS_SIZE_LIMIT:
-                imageName = window.path+"/images/toobig.gif";
+                imageName = window.path+"/Images/toobig.gif";
                 break;
             case SWFUpload.QUEUE_ERROR.ZERO_BYTE_FILE:
             case SWFUpload.QUEUE_ERROR.INVALID_FILETYPE:
@@ -97,7 +97,7 @@ function uploadComplete(file){
 }
 
 function uploadError(file, errorCode, message){
-    var imageName = window.path+"/images/error.gif";
+    var imageName = window.path+"/Images/error.gif";
     var progress;
     try {
         switch (errorCode) {
@@ -123,7 +123,7 @@ function uploadError(file, errorCode, message){
                     this.debug(ex2);
                 }
             case SWFUpload.UPLOAD_ERROR.UPLOAD_LIMIT_EXCEEDED:
-                imageName = window.path+"/images/uploadlimit.gif";
+                imageName = window.path+"/Images/uploadlimit.gif";
                 break;
             default:
                 alert(message);
@@ -140,7 +140,7 @@ function uploadError(file, errorCode, message){
 }
 
 function addImage(src){
-    var newElement = "<li><img class='content'  src='" + src + "' style=\"width:100px;height:100px;\"><img class='button' src="+window.path+"/images/fancy_close.png></li>";
+    var newElement = "<li><img class='content'  src='" + src + "' style=\"width:100px;height:100px;\"><img class='button' src="+window.path+"/Images/fancy_close.png></li>";
     $("#pic_list").append(newElement);
     $("img.button").last().bind("click", del);
     

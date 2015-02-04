@@ -30,29 +30,6 @@ Class BokeAction extends Action {
 		}
 	}
 	public function viewBoke(){
-     	if (!empty($_FILES)) {
-            //图片上传设置
-            $config = array(   
-                'maxSize'    =>    3145728, 
-                'rootPath'	 =>    'Public',
-                'savePath'   =>    '/uploads/',  
-                'saveName'   =>    array('uniqid',''), 
-                'exts'       =>    array('jpg', 'gif', 'png', 'jpeg'),  
-                'autoSub'    =>    false,   
-                'subName'    =>    array('date','Ymd'),
-            );
-            $upload = new \Think\Upload($config);// 实例化上传类
-            $images = $upload->upload();
-            //判断是否有图
-            if($images){
-                $info=$images['Filedata']['savename'];
-                //返回文件地址和名给JS作回调用
-                echo $info;
-            }
-            else{
-                $this->error($upload->getError());//获取失败信息
-            }
-        }
 		$id=$this->_get('id');
 		$this->data=M('boke')->find($id);
 		$this->display();
@@ -60,6 +37,7 @@ Class BokeAction extends Action {
 	public function runAddBoke(){
 		$data=array(
 			'title' => $this->_post('title'),
+			'tag' => $this->_post('tag'),
 			'content' => $this->_post('content'),
 			'create_at'=>date('Y-m-d H:i',time()),
 			'update_at'=>date('Y-m-d H:i',time()),
@@ -79,11 +57,12 @@ Class BokeAction extends Action {
 	public function runEditBoke(){
 		$data=array(
 			'title' => $this->_post('title'),
+			'tag' => $this->_post('tag'),
 			'content' => $this->_post('content'),
 			'update_at'=>date('Y-m-d H:i',time()),
 			'uname'=>$_SESSION['username'],
 			);
-		if(M('boke')->data($data)->add()){
+		if(M('boke')->where(array('id'=>$this->_post('id')))->save($data)){
 			$this->success('更新成功',U('index'));
 		}else{
 			$this->error('更新失败');
@@ -97,7 +76,7 @@ Class BokeAction extends Action {
 		$upload = new UploadFile();// 实例化上传类
 		$upload->maxSize  = 3145728 ;// 设置附件上传大小
 		$upload->allowExts  = array('jpg', 'gif', 'png', 'jpeg');// 设置附件上传类型
-		$savepath='__PUBLIC__/Uploads/'.date('Ymd').'/';
+		$savepath='./uploads/'.date('Ymd').'/';
 		if (!file_exists($savepath)){
 			mkdir($savepath);
 		}
@@ -106,6 +85,8 @@ Class BokeAction extends Action {
 			$this->error($upload->getErrorMsg());
 		}else{// 上传成功 获取上传文件信息
 			$info =  $upload->getUploadFileInfo();
+			$msg=$info[0]['savepath'].'/'.$info[0]['savename'];
+			$this->msg=$msg;
 		}
 		print_r(J(__ROOT__.'/'.$info[0]['savepath'].'/'.$info[0]['savename']));
 	}

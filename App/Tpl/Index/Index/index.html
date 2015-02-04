@@ -8,7 +8,7 @@
 				<?php foreach ($lists as $key => $value ) { ?>
 				<div class="da-slide">
 					<h2><a href="{:U('Index/Index/details', array('id' => $value['id']))}" style="color:white">{$value['title']}</a></h2>
-					<p>&nbsp&nbsp{$value['content']}.</p>
+					<p>{$value['content']}.</p>
 				</div>
 				<?php } ?>
 				<nav class="da-arrows">

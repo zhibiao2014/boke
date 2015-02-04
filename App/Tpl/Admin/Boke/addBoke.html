@@ -15,11 +15,20 @@
 	<link rel="stylesheet" href="__PUBLIC__/Css/common.css" />
 	<script type="text/javascript" src='__PUBLIC__/Js/jquery-1.8.2.min.js'></script>
 	<script type="text/javascript" src='__PUBLIC__/Js/common.js'></script>
+	<script type="text/javascript" charset="utf-8" src="__PUBLIC__/Js/ueditor.config.js"></script>
+    <script type="text/javascript" charset="utf-8" src="__PUBLIC__/Js/ueditor.all.min.js"> </script>
+    <script type="text/javascript" charset="utf-8" src="__PUBLIC__/Js/lang/zh-cn/zh-cn.js"></script>
+
+    <style type="text/css">
+        div{
+            width:80%;
+        }
+    </style>
 	<script type="text/javascript">
 		var swfu;
 		window.onload = function () {
 			swfu = new SWFUpload({
-				upload_url: "__PUBLIC__/Upload",
+				upload_url: "__URL__/uploadImg",
 				post_params: {"PHPSESSID": "<?php echo session_id();?>"},
 				file_size_limit : "2 MB",
 				file_types : "*.jpg;*.png;*.gif;*.bmp",
@@ -41,7 +50,7 @@
 				button_text_left_padding: 0,
 				button_window_mode: SWFUpload.WINDOW_MODE.TRANSPARENT,
 				button_cursor: SWFUpload.CURSOR.HAND,			
-				flash_url : "__PUBLIC__/JS/swfupload.swf",
+				flash_url : "__PUBLIC__/Js/swfupload.swf",
 				custom_settings : {
 					upload_target : "divFileProgressContainer"
 				},				
@@ -63,9 +72,14 @@
 				</td>
 			</tr>
 			<tr>
-				<td align='right'>内容</td>
+				<td width='25%' align='right'>特色</td>
 				<td>
-					<textarea name='content' style='width:800px;height:300px;'></textarea>
+					<textarea name='tag' style="font-size:18px" rows="40"></textarea>
+				</td>
+			</tr>
+			<tr>
+				<td align='right'>内容</td>
+					<script id="editor" name='content' type="text/plain" style="width:1024px;height:500px;"></script>
 				</td>
 			</tr>
 			<tr>
@@ -79,8 +93,8 @@
 							<div style="clear: both;"></div>
 						</div>
 					</div>
-					<input type="hidden" name="s" id="" value=""/>
-               </td>
+					<input type="hidden" name='msg' value="{$msg}" />
+				</td>
 			</tr>
 			<tr>
 				<td colspan='2'>
@@ -89,5 +103,118 @@
 			</tr>
 		</table>
 	</form>
+	<script type="text/javascript">
+
+    //实例化编辑器
+    //建议使用工厂方法getEditor创建和引用编辑器实例，如果在某个闭包下引用该编辑器，直接调用UE.getEditor('editor')就能拿到相关的实例
+    var ue = UE.getEditor('editor');
+
+
+    function isFocus(e){
+        alert(UE.getEditor('editor').isFocus());
+        UE.dom.domUtils.preventDefault(e)
+    }
+    function setblur(e){
+        UE.getEditor('editor').blur();
+        UE.dom.domUtils.preventDefault(e)
+    }
+    function insertHtml() {
+        var value = prompt('插入html代码', '');
+        UE.getEditor('editor').execCommand('insertHtml', value)
+    }
+    function createEditor() {
+        enableBtn();
+        UE.getEditor('editor');
+    }
+    function getAllHtml() {
+        alert(UE.getEditor('editor').getAllHtml())
+    }
+    function getContent() {
+        var arr = [];
+        arr.push("使用editor.getContent()方法可以获得编辑器的内容");
+        arr.push("内容为：");
+        arr.push(UE.getEditor('editor').getContent());
+        alert(arr.join("\n"));
+    }
+    function getPlainTxt() {
+        var arr = [];
+        arr.push("使用editor.getPlainTxt()方法可以获得编辑器的带格式的纯文本内容");
+        arr.push("内容为：");
+        arr.push(UE.getEditor('editor').getPlainTxt());
+        alert(arr.join('\n'))
+    }
+    function setContent(isAppendTo) {
+        var arr = [];
+        arr.push("使用editor.setContent('欢迎使用ueditor')方法可以设置编辑器的内容");
+        UE.getEditor('editor').setContent('欢迎使用ueditor', isAppendTo);
+        alert(arr.join("\n"));
+    }
+    function setDisabled() {
+        UE.getEditor('editor').setDisabled('fullscreen');
+        disableBtn("enable");
+    }
+
+    function setEnabled() {
+        UE.getEditor('editor').setEnabled();
+        enableBtn();
+    }
+
+    function getText() {
+        //当你点击按钮时编辑区域已经失去了焦点，如果直接用getText将不会得到内容，所以要在选回来，然后取得内容
+        var range = UE.getEditor('editor').selection.getRange();
+        range.select();
+        var txt = UE.getEditor('editor').selection.getText();
+        alert(txt)
+    }
+
+    function getContentTxt() {
+        var arr = [];
+        arr.push("使用editor.getContentTxt()方法可以获得编辑器的纯文本内容");
+        arr.push("编辑器的纯文本内容为：");
+        arr.push(UE.getEditor('editor').getContentTxt());
+        alert(arr.join("\n"));
+    }
+    function hasContent() {
+        var arr = [];
+        arr.push("使用editor.hasContents()方法判断编辑器里是否有内容");
+        arr.push("判断结果为：");
+        arr.push(UE.getEditor('editor').hasContents());
+        alert(arr.join("\n"));
+    }
+    function setFocus() {
+        UE.getEditor('editor').focus();
+    }
+    function deleteEditor() {
+        disableBtn();
+        UE.getEditor('editor').destroy();
+    }
+    function disableBtn(str) {
+        var div = document.getElementById('btns');
+        var btns = UE.dom.domUtils.getElementsByTagName(div, "button");
+        for (var i = 0, btn; btn = btns[i++];) {
+            if (btn.id == str) {
+                UE.dom.domUtils.removeAttributes(btn, ["disabled"]);
+            } else {
+                btn.setAttribute("disabled", "true");
+            }
+        }
+    }
+    function enableBtn() {
+        var div = document.getElementById('btns');
+        var btns = UE.dom.domUtils.getElementsByTagName(div, "button");
+        for (var i = 0, btn; btn = btns[i++];) {
+            UE.dom.domUtils.removeAttributes(btn, ["disabled"]);
+        }
+    }
+
+    function getLocalData () {
+        alert(UE.getEditor('editor').execCommand( "getlocaldata" ));
+    }
+
+    function clearLocalData () {
+        UE.getEditor('editor').execCommand( "clearlocaldata" );
+        alert("已清空草稿箱")
+    }
+</script>
 </body>
 </html>
