@@ -21,6 +21,7 @@
 			<th>博客标题</th>
 			<th>发布时间</th>
 			<th>审核</th>
+			<th>类型</th>
 			<th>操作</th>
 		</tr>
 		<?php foreach ($datas as $key=>$value){ ?>
@@ -28,11 +29,12 @@
 				<td>{$value['id']}</td>
 				<td>{$value['uname']}</td>
 				<td>{$value['title']}</td>
-				<td>{$value['create_at']}</td>				
+				<td>{$value['create_at']}</td>							
 				<if condition='$value["ispass"]'>
 				<td>通过</td>
 				<else/><td style="color:red">未通过</td>
 				</if>
+				<td>{$value['type']}</td>	
 				<td>
 					<ul>
 						<li><a href="{:U('Admin/Boke/viewBoke',array('id'=>$value["id"]))}">查看</a></li>

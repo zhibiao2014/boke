@@ -412,14 +412,14 @@ p.para{
 	line-height: 0px;
 }
 .nbs-flexisel-item > img {
-	width:200px;
-	height:100px;
+	width:400px;
+	height:200px;
 	cursor: pointer;
 	position: relative;
 	margin-top: 10px;
 	margin-bottom: 10px;
-	max-width: 100px;
-	max-height: 45px;
+	max-width: 228px;
+	max-height: 200px;
 }
 /*** start cauresol  navigation ***/
 .nbs-flexisel-nav-left, .nbs-flexisel-nav-right {
@@ -492,12 +492,10 @@ p.para{
 	margin-top: 2%;
 }
 .f_nav1 li {
-	display:inline-block
+	display:inline-block;
 }
 .f_nav1 li.timer{
 	background: url('../images/timer.png') no-repeat;
-}
-.f_nav1 li a{
 	padding-left:30px;
 	font-size: 0.8725em;
 	color: #999999;

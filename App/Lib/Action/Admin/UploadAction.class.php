@@ -1,11 +1,11 @@
 <?php
 class UploadAction extends Action {
 	function index() {
-		$this->display ();
+		$this->display();
 	}
 	
 	function s(){
-
+		$this->display('index');
 	}
 	function uploadImg() {
 		import('ORG.Net.UploadFile');
@@ -21,7 +21,12 @@ class UploadAction extends Action {
 			$this->error($upload->getErrorMsg());
 		}else{// 上传成功 获取上传文件信息
 			$info =  $upload->getUploadFileInfo();
+			$msg=$info[0]['savepath'].$info[0]['savename'];
 		}
+		$load=M('photo');
+		$load->create();
+		$load->photo=$msg;
+		$load->add();
 		print_r(J(__ROOT__.'/'.$info[0]['savepath'].'/'.$info[0]['savename']));
 	}
 

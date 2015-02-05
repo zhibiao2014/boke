@@ -72,7 +72,7 @@
 				</td>
 			</tr>
             <tr>
-                <td width='25%' align='right'>特色</td>
+                <td width='25%' align='right'>导读</td>
                 <td>
                     <textarea name='tag' style="font-size:18px"  cols="60px" rows="8" style='font-size:10px'>{$data["tag"]}</textarea>
                 </td>
@@ -83,7 +83,7 @@
 					<script id="editor" name='content' type="text/plain" style="width:1024px;height:500px;">{$data['content']}</script>
 				</td>
 			</tr>
-			<tr>
+			<!--<tr>
 				<td align='right'>上传图片</td>
 				<td>
 					<div style="width: 610px; height: auto; border: 1px solid #e1e1e1; font-size: 12px; padding: 10px;">
@@ -96,11 +96,11 @@
 					</div>
 					<input type="hidden" name="picture" id="" value=""/>
 				</td>
-			</tr>
+			</tr>-->
             <tr>
-            <td><font color="red">*</font>类型</th>
+            <td>类型</th>
                 <td>
-                  <?php echo Form::select(array('随记','热门文章','特色文章'),  $data['type'],'name=type id="type"'); ?>
+                  <?php echo Form::select(array('随记','热门文章','特色文章'),  $data['type'],'name=type','请选择'); ?>
               </td>
           </tr>
 			<tr>

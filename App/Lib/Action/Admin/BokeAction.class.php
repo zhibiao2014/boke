@@ -38,7 +38,6 @@ Class BokeAction extends Action {
 		$data=array(
 			'title' => $this->_post('title'),
 			'tag' => $this->_post('tag'),
-			'type' => $this->_post('type'),
 			'content' => $this->_post('content'),
 			'create_at'=>date('Y-m-d H:i',time()),
 			'update_at'=>date('Y-m-d H:i',time()),
@@ -60,6 +59,7 @@ Class BokeAction extends Action {
 		$data=array(
 			'title' => $this->_post('title'),
 			'tag' => $this->_post('tag'),
+			'type' => $this->_post('type'),
 			'ispass' => $this->_post('ispass'),
 			'content' => $this->_post('content'),
 			'update_at'=>date('Y-m-d H:i',time()),
@@ -88,9 +88,13 @@ Class BokeAction extends Action {
 			$this->error($upload->getErrorMsg());
 		}else{// 上传成功 获取上传文件信息
 			$info =  $upload->getUploadFileInfo();
-			$msg=$info[0]['savepath'].'/'.$info[0]['savename'];
+			$msg=date('Ymd').'/'.$info[0]['savename'];
 			$this->msg=$msg;
 		}
+		$load=M('photo');
+		$load->create();
+		$load->photo=$msg;
+		$load->add();
 		print_r(J(__ROOT__.'/'.$info[0]['savepath'].'/'.$info[0]['savename']));
 	}
 

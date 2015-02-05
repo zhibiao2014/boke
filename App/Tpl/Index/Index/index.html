@@ -26,15 +26,15 @@
 <div class="wrap">
 	<div class="main">
 		<div class="main_text">
-			<h2>生命就是个奇迹！！！</h2>
-			<p class="para">"一枝从污泥里长出的夏荷，竟开出雪一样洁白纯净的花儿；<br />  一粒细细黑黑的萤火虫，竟能在茫茫黑夜里发出星星般闪亮的光。<br />  一株微不足道的小草，竟开出像海洋一样湛蓝的花；<br />  一只毫不起眼的鸟儿，竟能在枝头唱出远胜小提琴的夜曲；<br />  一条柔软无骨的蚯蚓，居然能在坚实的土地里如鱼在海中似的自由遨游。"</p>
+			<h2></h2>
+			<p class="para"></p>
 		</div>
 		<!-- start grids_of_3 -->
-		<!--<div class="grids_of_3">
+		<div class="grids_of_3">
 			<div class="grid1_of_3">
 				<img src="__PUBLIC__/images/icon1.png" alt=""/>
-				<h3><a href="#">视频 </a></h3>
-				<p>百度视频搜索是全球最大的中文视频搜索引擎,拥有最多的中文视频资源,提供用户最完美的观看体验。.</p>
+				<h3><a href="">视频 </a></h3>
+				<p></p>
 			</div>
 			<div class="grid1_of_3">
 				<img src="__PUBLIC__/images/icon2.png" alt=""/>
@@ -43,11 +43,11 @@
 			</div>
 			<div class="grid1_of_3">
 				<img src="__PUBLIC__/images/icon3.png" alt=""/>
-				<h3><a href="#">图片 </span> </a></h3>
-				<p>50万张高清图片素材和桌面壁纸免费下载,全部高清无水印!内容涵盖风景图片、动物图片、鲜花图片、家居图片、设计素材、电脑壁纸、动漫壁纸、电影壁纸、明星壁纸、美女...</p>
+				<h3><a href="">图片 </span> </a></h3>
+				<p></p>
 			</div>
 			<div class="clear"></div>
-		</div>-->
+		</div>
 		<!-- end grids_of_3 -->
 	</div>
 </div>
@@ -59,7 +59,7 @@
 		<div class="span_of_3">
 			<?php foreach ($lists as $key=>$value){ ?>
 			<div class="span1_of_3">
-				<a href="{:U('Index/Index/details', array('id' => $value['id']))}"><img src="__PUBLIC__/images/pic1.jpg" alt=""/></a>
+				<a href="{:U('Index/Index/details', array('id' => $value['id']))}"><img src="__PUBLIC__/images/pic{$key+1}.jpg" alt=""/></a>
 				<div class="span1_of_3_text">
 					<h3><a href="{:U('Index/Index/details', array('id' => $value['id']))}">{$value['title']}</a></h3>
 				</div>
@@ -70,5 +70,64 @@
 		<!-- end grids_of_3 -->
 	</div>
 </div>
+</div>
+</block>
+<block name='photo'>
+<div class="wrap">
+		<ul id="flexiselDemo3">
+			<li><img src="__APP__/uploads/{$photos['0']['photo']}" /></li>
+			<li><img src="__APP__/uploads/{$photos['1']['photo']}" /></li>
+			<li><img src="__APP__/uploads/{$photos['2']['photo']}" /></li>
+			<li><img src="__APP__/uploads/{$photos['3']['photo']}" /></li>
+			<li><img src="__APP__/uploads/{$photos['4']['photo']}" /></li>
+			<li><img src="__APP__/uploads/{$photos['5']['photo']}" /></li>
+		</ul>
+	<script type="text/javascript">
+$(window).load(function() {
+	$("#flexiselDemo1").flexisel();
+	$("#flexiselDemo2").flexisel({
+		enableResponsiveBreakpoints: true,
+    	responsiveBreakpoints: { 
+    		portrait: { 
+    			changePoint:480,
+    			visibleItems: 1
+    		}, 
+    		landscape: { 
+    			changePoint:640,
+    			visibleItems: 2
+    		},
+    		tablet: { 
+    			changePoint:768,
+    			visibleItems: 3
+    		}
+    	}
+    });
+
+	$("#flexiselDemo3").flexisel({
+		visibleItems: 5,
+		animationSpeed: 1000,
+		autoPlay: true,
+		autoPlaySpeed: 3000,    		
+		pauseOnHover: true,
+		enableResponsiveBreakpoints: true,
+    	responsiveBreakpoints: { 
+    		portrait: { 
+    			changePoint:480,
+    			visibleItems: 1
+    		}, 
+    		landscape: { 
+    			changePoint:640,
+    			visibleItems: 2
+    		},
+    		tablet: { 
+    			changePoint:768,
+    			visibleItems: 3
+    		}
+    	}
+    });
+    
+});
+</script>
+<script type="text/javascript" src="__PUBLIC__/js/jquery.flexisel.js"></script>
 </div>
 </block>

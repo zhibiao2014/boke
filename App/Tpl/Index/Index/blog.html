@@ -16,7 +16,7 @@
 				<a  href="details/id/{$value['id']}"><h2>{$value['title']}</h2></a>
 					<h5>{$value['create_at']} , Posted by&nbsp;<a href="index">{$value['uname']}</a></h5>
 					<div class="blog_para">
-						<p class="para"><a  href="details/id/{$value['id']}"><img src="__PUBLIC__/images/blog1.jpg" alt=""></a><?php echo getstr($value['content'],600) ?>......</p>
+						<p class="para"><a  href="details/id/{$value['id']}"><img src="__PUBLIC__/images/blog1.jpg" alt=""></a>&nbsp&nbsp{$value['tag']}</p>
 						<div class="read_more">
 							<a class="btn" href="details/id/{$value['id']}">查看全文</a>
 						</div>
