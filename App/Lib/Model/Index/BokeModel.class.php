@@ -1,5 +1,5 @@
 <?php  
-Class BokeModel extends AdvModel {
+Class BokeModel extends Model {
 	
 }
 ?>
