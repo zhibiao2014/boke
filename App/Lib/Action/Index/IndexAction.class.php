@@ -21,6 +21,8 @@ Class IndexAction extends Action {
 	public function details(){
 		$id=$this->_get('id');
 		$this->detail=M('boke')->find($id);
+		$this->tags=M('boke')->where( array( 'ispass'=>1,'type'=>2 ) )->order('create_at desc')->limit('4')->select();
+		$this->hots=M('boke')->where( array( 'ispass'=>1,'type'=>1 ) )->order('create_at desc')->limit('4')->select();
 		$this->display();
 	}
 	public function service(){
