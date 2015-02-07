@@ -77,7 +77,30 @@
 			___drag:"___boxTitle"
 		});
 	});
+
+		$("#common").click(function(){
+			$.XYTipsWindow({
+				___title:"评论",
+				___content:"iframe:{:U('Login/common',array('title'=>$_GET['id']))}",
+				___width:"460",
+				___height:"320",
+				___showbg:true,
+				___drag:"___boxTitle"
+			});
+		});
+
+		$("#liuyan").click(function(){
+			$.XYTipsWindow({
+				___title:"评论",
+				___content:"iframe:{:U('Login/common',array('title'=>$_GET['id']))}",
+				___width:"460",
+				___height:"320",
+				___showbg:true,
+				___drag:"___boxTitle"
+			});
+		});
  })
+
  </script>
 <block name='subheader'></block>
 </head>
@@ -91,8 +114,9 @@
 		</div>
 		<div class="social-icons">
 		    <ul>
-		        <button id="login">登录</button>
-        		<button id="reg">注册</button>
+		        <!--<button id="login">登录</button>
+        		<button id="reg">注册</button>-->
+        		<button id="liuyan">给我留言</button>
 			</ul>
 		</div>
 		<div class="clear"></div>
@@ -244,7 +268,6 @@
 			  <li><a href="#" target="_blank"></a></li>
 			</ul>
 		</div>
-|
 		<div class="clear"></div>
 	</div>
 </div>

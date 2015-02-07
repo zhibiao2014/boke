@@ -15,24 +15,24 @@
 		<tr>
 			<th>ID</th>
 			<th>评论内容</th>
-			<th>评论用户</th>
+			<th>评论用户名</th>
+			<th>用户邮箱</th>
+			<th>用户手机号</th>
 			<th>评论时间</th>
-			<th>操作</th>
 		</tr>
-		<foreach  name='comment' item='v'>
+		<?php foreach ($datas as $key => $value) { ?>
 			<tr>
-				<td width='50' align='center'>{$v.id}</td>
-				<td>{$v.content}</td>
-				<td width='100'>{$v.username}</td>
-				<td width='100' align='center'>{$v.time|date='y-m-d H:i', ###}</td>
-				<td width='60'>
-					<a href="{:U('delComment', array('id' => $v['id'], 'wid' => $v['wid']))}" class='del'></a>
-				</td>
+				<td width='50' align='center'>{$value['id']}</td>
+				<td>{$value['content']}</td>
+				<td>{$value['name']}</td>
+				<td>{$value['email']}</td>
+				<td width='100'>{$value['number']}</td>
+				<td width='100' align='center'>{$value['create_at']}</td>
 			</tr>
-		</foreach>
-		<tr>
+		<?php } ?>
+		<!--<tr>
 			<td colspan='5' align='center' height='60'>{$page}</td>
-		</tr>
+		</tr>-->
 	</table>
 </body>
 </html>

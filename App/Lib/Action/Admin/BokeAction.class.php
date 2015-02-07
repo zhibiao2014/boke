@@ -1,6 +1,8 @@
 <?php  
 Class BokeAction extends Action {
 	public function comment(){
+		$db=M('comment');
+		$this->datas=$db->order('create_at desc,id desc')->select();
 		$this->display();
 	}
 	public function index(){
