@@ -7,8 +7,12 @@ Class BokeAction extends Action {
 	}
 	public function index(){
 		$db=M('boke');
+		import('ORG.Util.Page');// 导入分页类
 		$this->users=M('users')->select();
+		$Page       = new Page($count,10);// 实例化分页类 传入总记录数和每页显示的记录数
+		$show       = $Page->show();// 分页显示输出
 		$this->datas=$db->order('create_at desc,id desc')->select();
+		$this->assign('page',$show);// 赋值分页输出
 		$this->display();
 	}
 	public function sechBoke(){
