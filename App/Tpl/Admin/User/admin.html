@@ -6,6 +6,24 @@
 	<link rel="stylesheet" href="__PUBLIC__/Css/common.css" />
 	<script type="text/javascript" src='__PUBLIC__/Js/jquery-1.8.2.min.js'></script>
 	<script type="text/javascript" src='__PUBLIC__/Js/common.js'></script>
+	<script type="text/javascript">
+		/**
+		* 全选checkbox,注意：标识checkbox id固定为为check_box
+		* @param string name 列表check名称,如 uid[]
+		*/
+		function selectall(name) {
+			if ($("#check_box").attr("checked")=='checked') {
+				$("input[name='"+name+"']").each(function() {
+					$(this).attr("checked","checked");
+
+				});
+			} else {
+				$("input[name='"+name+"']").each(function() {
+					$(this).removeAttr("checked");
+				});
+			}
+		}
+	</script>
 </head>
 <body>
 	<div class='status'>
@@ -13,6 +31,7 @@
 	</div>
 	<table class="table">
 		<tr>
+			<th width="16"><input type="checkbox" value="" id="check_box" onclick="selectall('ids[]');"></th>
 			<th>ID</th>
 			<th>管理员名称</th>
 			<th>级别</th>
@@ -21,8 +40,9 @@
 			<th>账号状态</th>		
   			<th>操作</th>
 		</tr>
-		<?php foreach ($users as $value) { ?>
+		<?php foreach ($users as $key => $value) { ?>
 			<tr>
+				<td align="center"><input class="inputcheckbox " name="ids[]" value="<?php echo $value['user_id']; ?>" type="checkbox"></td>
 				<td width='50' align='center'>{$value['user_id']}</td>
 				<td width='120' align='center'>{$value['name']}</td>
 				<td align='center'>
@@ -49,6 +69,13 @@
 				</td>
 			</tr>
 		<?php } ?>
+		<tr>
+		<td colspan="8">
+		<div class="btn"><label for="check_box">全选/取消</label>
+			<input name="submit" type="submit" class="button" value="排序">&nbsp;
+			<input name="deletesubmit" type="submit" class="button" value="删除" onclick="document.myform.action='<?php echo U('Floor/delete'); ?>';return confirm('确认要删除 『 选中 』 吗？')">&nbsp;
+		</div></td>
+		</tr>
 	</table>
 </body>
 </html>
