@@ -30,11 +30,21 @@ Class BokeAction extends Action {
 		$this->display();
 	}
 	public function delBoke(){
-		$id=$this->_get('id');
-		if(M('boke')->delete($id)){
-			$this->success('删除成功',U('index'));
-		}else{
-			$this->error('删除失败，请重试...');
+		if(IS_POST){
+			$ids = $_POST['ids'];
+			if (!empty($ids) && is_array($ids)) {
+				foreach ($ids as $key => $value) {
+					M('boke')->where(array('id' => $value ) )->delete();
+				}
+				$this->success('删除成功',U('index'));
+			}else{$this->error("您没有勾选信息");}
+			}else{
+			$id=$this->_get('id');
+			if(M('boke')->delete($id)){
+				$this->success('删除成功',U('index'));
+			}else{
+				$this->error('删除失败，请重试...');
+			}
 		}
 	}
 	public function viewBoke(){
