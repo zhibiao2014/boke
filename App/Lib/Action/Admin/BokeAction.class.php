@@ -1,4 +1,5 @@
 <?php  
+
 Class BokeAction extends Action {
 	public function comment(){
 		$db=M('comment');
@@ -25,6 +26,7 @@ Class BokeAction extends Action {
 		$this->display();
 	}
 	public function addBoke(){
+		var_dump($config);
 		$this->display();
 	}
 	public function delBoke(){
